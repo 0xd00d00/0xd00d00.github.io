@@ -1,0 +1,80 @@
+# Site settings 配置站点
+title: "doodoo's cooding"
+description: "I really love solving computer problem. I wanna grow today more than yesterday."
+keyword: 'Chromium, Algorithm, Baekjoon, C++, Google'
+url: '' # your host
+
+baseurl: ''
+
+# Navigation links
+nav:
+  home: '/'
+  tags: '/tags.html'
+
+# [doodoo] if you append the page, write here.
+#haha: '/'
+
+# Footer
+footer:
+  since: 2021
+
+# Author info
+author: 'DooDoo'
+nickname: 'doodoo'
+bio: 'I really love solving computer problem. I wanna grow today more than yesterday :)'
+avatar: '/assets/img/profile.png'
+
+# Search
+search: true
+
+# Night mode
+nightMode: true
+
+# Comments
+comments:
+  disqus: false
+  disqus_url: 'https://liaokeyu.disqus.com/embed.js'
+
+# MathJax 公式支持 by Ray-Eldath
+mathjax: true
+
+# Share
+#social-share: true
+#social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
+
+# theme color
+theme-color: 'default'  # pink or default
+
+# Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
+postPatterns: 'circuitBoard'
+
+# SNS settings
+# url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
+sns:
+  email: 'mailto:0xd00d00b@gmail.com'
+  github: '//github.com/0xd00d00'
+
+# Tags 设置标签
+recommend-tags: true # whether or not display recommend-tags on the sidebar
+recommend-condition-size: 6 # a tag will be recommended if the size of it is more than this value
+
+# Build settings
+paginate: 6
+paginate_path: 'page:num'
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+
+# RSS
+RSS: false
+
+# Permalink
+# See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
+permalink: /:year/:month/:day/:title.html
+
+# Plugins
+plugins: [jekyll-paginate]

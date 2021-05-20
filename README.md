@@ -1,2 +1,3 @@
-# 0xd00d00.github.io
-this is doodoo's programming note :)
+# Welcome to doodoo's blog ⭐️ ;)
+
+Hope this blog helps for you!
