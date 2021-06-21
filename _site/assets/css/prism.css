@@ -6,6 +6,17 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
  * @author Rose Pritchard
  */
 
+
+@font-face{
+	font-family:D2coding-Regular;
+	src:url(../fonts/D2Coding/D2Coding-regular.ttf)
+}
+
+@font-face{
+	font-family:D2coding-Bold;
+	src:url(../fonts/D2Coding/D2Coding-Bold.ttf)
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
 
@@ -13,7 +24,7 @@ pre[class*="language-"] {
 
 	background: none;
 
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: 'D2coding-Regular', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
 	font-size: 1em;
 
@@ -61,13 +72,10 @@ pre[class*="language-"] {
 }
 
 
-:not(pre) > code[class*="language-"],
+code[class*="language-"],
 pre[class*="language-"] {
-
 	background: #2d2d2d;
-
 }
-
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
