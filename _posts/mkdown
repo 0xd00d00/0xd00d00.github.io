@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# input1 is file name
+
+# this is file check statement
+if [ -z $1 ];
+then
+  echo 'add input file name to make markdown file'
+  exit
+fi
+
+
+TODAY=$(date '+%Y-%m-%d')
+FILENAME=$1
+EXTENTION='.md'
+NEWFILE=$TODAY"-"$1$EXTENTION
+
+echo "for loop"
+for filename in $(ls -l | awk '{ print $9 }'); do
+  if [ ${filename} -ef ${NEWFILE} ]; then
+      echo "this is same file! so, we close this script to prevent removing this content!"
+      exit
+  fi
+done
+
+touch $NEWFILE
+
+echo "---" > $NEWFILE
+echo "layout: post" >> $NEWFILE
+echo "author: doodoo" >> $NEWFILE
+echo "title: input your title" >> $NEWFILE
+echo "subtitle: input your title" >> $NEWFILE
+echo "date: "$TODAY >> $NEWFILE
+echo "cover: asset/img/default.png" >> $NEWFILE
+echo "tags: haha" >> $NEWFILE
+echo "---" >> $NEWFILE
+
+echo "check your md file if you write title, subtitle and tags!!!! "
