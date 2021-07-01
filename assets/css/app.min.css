@@ -35,6 +35,10 @@ a{
 	text-decoration:none;
 	cursor:pointer;
 transition:.2s}
+em {
+	font-style: normal;
+	font-family: NotoSans-Bold;
+}
 ::selection{
 background-color:rgba(0,147,254,.2)}
 ::-moz-selection{
