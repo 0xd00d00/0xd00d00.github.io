@@ -80,14 +80,19 @@ pre[class*="language-"] {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 
-	padding: .1em;
-
+	padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 95%;
+  font-family:  "D2coding-Bold", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #f9f9f9;
+  background: #f9f9f9;
+  color: #e83e8c;
 	border-radius: .3em;
-
-	white-space: normal;
-
 }
-
+<!--
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;-->
 
 .token.comment,
 .token.block-comment,

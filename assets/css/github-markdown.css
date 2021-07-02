@@ -215,6 +215,7 @@
   background-color: #f9f9f9;
   background: #f9f9f9;
   color: #e83e8c;
+	border-radius: .3em;
 }
 
 .markdown-body hr {
@@ -616,6 +617,7 @@ li p:nth-child(2) {
   background-color: #f9f9f9;
   background: #f9f9f9;
   color: #e83e8c;
+	border-radius: .3em;
 }
 
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
