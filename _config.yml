@@ -1,4 +1,4 @@
-# Site settings 配置站点
+# Site settings
 title: "doodoo's cooding"
 description: "I really love solving computer problem. I wanna grow today more than yesterday."
 keyword: 'Chromium, Algorithm, Baekjoon, C++, Google'
@@ -54,7 +54,7 @@ sns:
   email: 'mailto:0xd00d00b@gmail.com'
   github: '//github.com/0xd00d00'
 
-# Tags 设置标签
+# Tags
 recommend-tags: true # whether or not display recommend-tags on the sidebar
 recommend-condition-size: 6 # a tag will be recommended if the size of it is more than this value
 
