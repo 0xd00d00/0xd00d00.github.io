@@ -58,7 +58,7 @@ using namespace std;
 
 static int answer = 50;
 
-void bfs(string begin, const string target, vector<bool>& check, const vector<string>& words, int count = 0) {
+void dfs(string begin, const string target, vector<bool>& check, const vector<string>& words, int count = 0) {
 
     if (begin == target) {
         if (answer > count) answer = count;
@@ -75,7 +75,7 @@ void bfs(string begin, const string target, vector<bool>& check, const vector<st
 
         if (b_cnt == 1) {
             check[i] = true;
-            bfs(words[i], target, check, words, count + 1);
+            dfs(words[i], target, check, words, count + 1);
             check[i] = false;
         }
     }
@@ -84,7 +84,7 @@ void bfs(string begin, const string target, vector<bool>& check, const vector<st
 int solution(string begin, string target, vector<string> words) {
     vector<bool> check(words.size(),false);
 
-    bfs(begin, target, check, words);
+    dfs(begin, target, check, words);
     return answer == 50 ? 0 : answer;
 }
 ```
@@ -124,7 +124,7 @@ using namespace std;
 
 static int answer = 50;
 
-void bfs(string begin, const string target, vector<bool>& check, const vector<string>& words, int count = 0) {
+void dfs(string begin, const string target, vector<bool>& check, const vector<string>& words, int count = 0) {
 
     /* 탈출 조건 : begin == target */
     if (begin == target) {
@@ -150,7 +150,7 @@ void bfs(string begin, const string target, vector<bool>& check, const vector<st
         */
         if (b_cnt == 1) {
             check[i] = true;
-            bfs(words[i], target, check, words, count + 1);
+            dfs(words[i], target, check, words, count + 1);
             check[i] = false;
         }
     }
@@ -158,18 +158,10 @@ void bfs(string begin, const string target, vector<bool>& check, const vector<st
 
 int solution(string begin, string target, vector<string> words) {
     vector<bool> check(words.size(),false);
-    bfs(begin, target, check, words);
+    dfs(begin, target, check, words);
     return answer == 50 ? 0 : answer;
 }
 ```
 
 *배운 점*
 - test case 3번이 계속 오류가 났다. 한 2시간 고민했나? 분명 logic은 맞을텐데 하면서 고민을 하고 또 했다. 결국 문제를 찾았는데.. `check[j]` 부분이었다. 현재 input array 기준으로 `check[i]` 배열은 검사하도록 되어져있다. 하지만 코드를 설렁설렁 짜다보니, `check[]`에 index 를 `i` 가 아닌 `j` 로 넣은 것.. 하하.. 다음 부턴 코드를 설렁짜지 말자. 🤦
-
-
-
-
-
-
-
-
