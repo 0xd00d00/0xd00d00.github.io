@@ -104,6 +104,12 @@ pre[class*="language-"] {
 
 }
 
+.token.comment,
+.token.block-comment
+{
+	color: #e67d7d;
+}
+
 
 .token.punctuation {
 
