@@ -72,6 +72,9 @@ kramdown:
 # RSS
 RSS: false
 
+# codepen user name
+codepen_username: 0xd00d00
+
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
 permalink: /:year/:month/:day/:title.html
