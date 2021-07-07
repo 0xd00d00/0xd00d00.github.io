@@ -34,5 +34,7 @@ echo "date: "$TODAY >> $NEWFILE
 echo "cover: /assets/img/default.png" >> $NEWFILE
 echo "tags: haha" >> $NEWFILE
 echo "---" >> $NEWFILE
+echo "궁금한 점, 보안점 남겨주시면 성실히 답변하겠습니다. 😁" >> $NEWFILE
+echo "\+ 감상평 댓글로 남겨주시면 힘이됩니다. 🙇" >> $NEWFILE
 
 echo "check your md file if you write title, subtitle and tags!!!! "
