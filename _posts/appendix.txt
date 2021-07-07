@@ -16,3 +16,7 @@
 
 - gradiation
 - linear-gradient(#09203f,#537895)
+
+- 캐릭터 만드는 사이트
+- https://kr.vonvon.me/quiz/604
+- https://kr.vonvon.me/quiz/r/604/6941/v_2580fs1czaps6gwpm // 내 캐릭터
