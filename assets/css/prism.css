@@ -110,6 +110,11 @@ pre[class*="language-"] {
 	color: #e67d7d;
 }
 
+.language-html > .token.comment
+{
+	color : #faffaa;
+}
+
 
 .token.punctuation {
 
