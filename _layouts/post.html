@@ -15,6 +15,15 @@
           {% for tag in page.tags  %}
             <a href="{{ "/tags.html#" | append: tag | relative_url }}" class="post-tag">{{ tag }}</a>
           {% endfor %}
+
+				<a href="https://hits.seeyoufarm.com" style="float:right;
+																							line-height:40px;"><img
+					 src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2F0xd00d00.github.io%2F{{
+								page.date | date :"%y"}}%2F{{page.date | date
+																	 :"%m"}}%2F{{page.date | date
+																				:"%d"}}%2F{{ page.url
+																				}}&count_bg=%235d5b5b&title_bg=%23d00d00&icon=awesomelists.svg&icon_color=%23E7E7E7&title=%EC%A1%B0%ED%9A%8C%EC%88%98&edge_flat=false"
+																			height="22px;"/></a>
         {% endif %}
       </div>
       <h1>{{ page.title }}</h1>

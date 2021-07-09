@@ -46,8 +46,17 @@ description: "Bring your A game."
                     </div>
 										<span class="post-date">
 										<i class="far fa-calendar-alt"></i>
-                    <time  datetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+                    <timedatetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
 										</span>
+										<!-- 조회수
+										<a href="https://hits.seeyoufarm.com"
+														 style="line-height:37px; padding: 0 8px;"><img
+           src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2F0xd00d00.github.io%2F{{
+                post.date | date :"%y"}}%2F{{post.date | date
+                                   :"%m"}}%2F{{post.date | date
+                                        :"%d"}}%2F{{ post.url | relative_url
+																				}}&count_bg=%23a6abb2&title_bg=%235d5b5b&icon=telegram.svg&icon_color=%23E7E7E7&title=%EC%A1%B0%ED%9A%8C%EC%88%98&edge_flat=false"
+																				height="22px"/></a> -->
                 </footer>
             </article>
         {% endfor %}
@@ -107,7 +116,7 @@ description: "Bring your A game."
         {% if site.search %}
         <div class="search-card">
             <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
-            <i class="iconfont icon-search"></i>
+            <i class="fas fa-search"></i>
             <div class="search_result"></div>
         </div>
         {% endif %}
