@@ -190,7 +190,9 @@ height:100%}
 overflow:hidden}
 .article-list .article-item .post-cover img{
 	width:100%;
-vertical-align:middle}
+vertical-align:middle;
+	height:100%;
+}
 .article-list .article-item .post-preview{
 position:relative}
 .article-list .article-item .post-preview .post-title{
