@@ -4,7 +4,7 @@ author: doodoo
 title: "[jekyll][codepen] jekyll 블로그에 codepen 추가하는 방법"
 subtitle: "야 너두 codepen으로 코드 결과 동시에 볼 수 있어 😁 "
 date: 2021-07-06
-cover: /assets/img/default.png
+cover: /assets/img/codepen_save.png
 tags: jekyll
 ---
 
@@ -41,7 +41,7 @@ codepen은 web developer를 위한 online compiler이다. 웹 개발자를 기�
 
 우선 codepen을 추가하기 위해서는 [codepen 사이트](https://codepen.io/) 에 접속해 로그인을 해줘야한다. 로그인 후 my pen 만들기를 들어가보자. 들어간 후 아래와 같이 코드를 작성해보자.
 
-![codepen](/assets/img/codepen.png)
+![codepen](/assets/img/codepen_save.png)
 
 작성 후 빨간 표시로 되어있는 저장 버튼을 눌러보자.
 

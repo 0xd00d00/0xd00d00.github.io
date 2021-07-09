@@ -19,8 +19,12 @@
       </div>
       <h1>{{ page.title }}</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>
-        <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="iconfont icon-date"></i>{{ page.date | date_to_string }}</time>
+        <span class="post-meta-item"><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>
+        <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="far fa-calendar-alt"></i> {{ page.date | date_to_string }}</time>
+				<span class="post-meta-item">
+				<i class="fas fa-hourglass-half"></i>
+					{% include read_time.html%}
+				</span>
       </div>
     </div>
     {% if page.cover %}
