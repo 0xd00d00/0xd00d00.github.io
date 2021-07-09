@@ -25,7 +25,8 @@
     </div>
     {% if page.cover %}
     <div class="filter"></div>
-      <div class="post-cover" style="background: url('{{ page.cover | relative_url }}') center no-repeat; background-size: cover;"></div>
+		<!--{{ page.cover | relative_url }}-->
+      <div class="post-cover" style="background: url('/assets/img/cover_page.png') center no-repeat; background-size: cover;"></div>
     {% endif %}
   </header>
 
