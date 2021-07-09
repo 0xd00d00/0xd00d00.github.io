@@ -44,7 +44,10 @@ description: "Bring your A game."
                             {% endfor %}
                         {% endif %}
                     </div>
-                    <time class="post-date" datetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+										<span class="post-date">
+										<i class="far fa-calendar-alt"></i>
+                    <time  datetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
+										</span>
                 </footer>
             </article>
         {% endfor %}
@@ -65,17 +68,28 @@ description: "Bring your A game."
                 <div class="bio">
                     <p>{{ site.bio }}</p>
                 </div>
-                {% if site.sns.size > 0 %}
+								<!--{% if site.sns.size > 0 %}-->
                 <ul id="sns-links" class="sns-links">
+									<li>
+										<a href="mailto:0xd00d00b@gmail.com" target="_blank">
+										<i class="far fa-email"></i>
+									</li>
+									<li>
+										<a href="//github.com/0xd00d00" target="_blank">
+										<i class="fab fa-github"></i>
+									</li>
+
+									<!--
                     {% for s in site.sns %}
                     <li>
                         <a href="{{ s[1] }}" target="_blank">
-                            <i class="iconfont icon-{{ s[0] }}"></i>
+                            <i class="far fa-{{ s[0] }}"></i>
                         </a>
                     </li>
                     {% endfor %}
+									-->
                 </ul>
-                {% endif %}
+								<!--{% endif %}-->
             </section>
 
             {% if site.recommend-tags and site.tags.size>0 %}
