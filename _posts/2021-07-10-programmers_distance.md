@@ -6,6 +6,9 @@ subtitle: "고득점 kit의 가장 먼 노드 문제를 풀어보자. 🔥"
 date: 2021-07-10
 cover: /assets/img/graph_distance.png
 tags: 프로그래머스 알고리즘 Graph BFS
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 해당 문제는 고득점 kit의 가장 먼 노드 문제입니다. 문제는 [여기](https://programmers.co.kr/learn/courses/30/lessons/49189) 클릭해서 확인해주세요! (문제 저작권 보호차원 링크로 공유드립니다😟)

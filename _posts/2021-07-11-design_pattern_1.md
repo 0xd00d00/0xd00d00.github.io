@@ -6,6 +6,9 @@ subtitle: "조금 느릴수도.. 하지만 꾸준히 DP를 공부해봅시다.�
 date: 2021-07-11
 cover: /assets/img/default.png
 tags: C++ Design_Pattern
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 안녕하세요. <br>

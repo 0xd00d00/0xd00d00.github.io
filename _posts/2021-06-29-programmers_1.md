@@ -6,6 +6,9 @@ subtitle: "고득점 kit 입국심사 문제를 풀어보자 🤓"
 date: 2021-06-29
 cover: /assets/img/default_1.png
 tags: programmers
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 문제

@@ -6,6 +6,9 @@ subtitle: "야 너두 codepen으로 코드 결과 동시에 볼 수 있어 😁 
 date: 2021-07-06
 cover: /assets/img/codepen_save.png
 tags: jekyll
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 해당 포스팅은 jekyll 블로그에서 codepen을 추가하는 방법에 대해 설명합니다.
@@ -53,12 +56,21 @@ codepen은 web developer를 위한 online compiler이다. 웹 개발자를 기�
 
 그리고 본인의 jekyll 디렉토리에서 `_includes/codepen.html` 파일을 생성하자.
 
-해당 코드 [여기](https://raw.githubusercontent.com/0xd00d00/0xd00d00.github.io/master/_includes/codepen.html) 클릭해 코드를 복사해 붙여넣자. (code 로 작성할 경우 원인을 알 수 없이 코드가 보이지 않아 git raw file로 첨부해 코드를 공유하고자 한다😰)
+```html
+{% raw %}{% assign username = include.username %}
+{% unless username %}
+{% assign username = site.codepen_username %}
+{% endunless %}
+
+<p data-height="300" data-theme-id="0" data-slug-hash="{{ include.hash }}" data-default-tab="html,result" data-user="{{ username }}" class='codepen split-output'>
+See the Pen <a href='https://codepen.io/{{ username }}/pen/{{ include.hash }}/'>{{ include.title }}</a> by {{ username }} (<a href='https://codepen.io/{{ username }}'>@{{ username }}</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>{% endraw %}
+```
 
 ```html
 <p data-height="300" data-theme-id="0" data-slug-hash="{{ include.hash }}" data-default-tab="html,result" data-user="{{ username }}" class='codepen split-output'>
 ```
-
+<span class="tip">Tip</span> liquid 코드를 code block에 붙여 넣기 위해서는 `raw`와 `endraw` 사이에 liquid 코드를 묶어줘야 한다 🤗 자세한 내용은 [여기](https://shopify.github.io/liquid/tags/template/) 를 참고하자.
 참조한 코드를 보면 위의 코드가 들어있을 것이다. 여기서 사용시 필요한 몇가지만 다뤄보자.
 
 - `data-height` : embedding 된 codepen의 높이를 지정하는 속성이다
@@ -80,8 +92,10 @@ codepen_username: username
 본인이 작성하고 싶은 포스팅을 연다.
 이후 아래의 *코드*을 추가해주자. 추가해 줄 때 해시 값은 우리가 앞서 다뤘던 *codepen 설정* 부분에서 기억하라던 *해시 값*이다. (이해가 되지 않을 경우 codepen 설정 부분을 다시한번 보자!)
 
-![codepen](/assets/img/codepen.png)
+```html
+{% raw %}{% include codepen.html hash="QWvyPqB" title="hello" %}{% endraw %}
+```
 
-코드팬에 작성 후, 본인이 원하는 포스팅 위치에 넣어보자. 그럴 경우 아래와 같은 결론을 만날 수 있을 것이다 🎵
+코드팬에 작성 후, 위의 코드를 본인이 원하는 포스팅 위치에 넣어보자. 그럴 경우 아래와 같은 결론을 만날 수 있을 것이다 🎵
 
 {% include codepen.html hash="QWvyPqB" title="hello" %}

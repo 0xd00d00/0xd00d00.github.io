@@ -6,6 +6,9 @@ subtitle: "Protected 접근권한에 생성자와 소멸자를 만드는 이유�
 date: 2021-07-11
 cover: /assets/img/default.png
 tags: C++ Design_Pattern
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 C++ 디자인 패턴 강의를 듣고 정리하고자 합니다. 자세한 내용은 [여기](https://0xd00d00.github.io/2021/07/11/design_pattern_1.html)를 클릭해주세요.
 

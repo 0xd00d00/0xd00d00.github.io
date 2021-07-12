@@ -6,6 +6,9 @@ subtitle: "고득점 kit의 단어변환 문제를 풀어보자. 🔥"
 date: 2021-07-04
 cover: /assets/img/Change_words_dfs.png
 tags: 프로그래머스 알고리즘
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ### 문제
