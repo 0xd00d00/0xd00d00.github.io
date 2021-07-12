@@ -33,7 +33,13 @@ echo "subtitle: input your title" >> $NEWFILE
 echo "date: "$TODAY >> $NEWFILE
 echo "cover: /assets/img/default.png" >> $NEWFILE
 echo "tags: haha" >> $NEWFILE
+echo "sitemap :" >> $NEWFILE
+echo " changefreq : daily" >> $NEWFILE
+echo " priority : 1.0" >> $NEWFILE
 echo "---" >> $NEWFILE
+
+echo "🖇 소스코드에 마우스를 올리고 `copy` 버튼을 누를 경우 더 쉽게 복사할 수 있습니다! " >> $NEWFILE
+echo >> $NEWFILE
 echo "궁금한 점, 보안점 남겨주시면 성실히 답변하겠습니다. 😁 <br>" >> $NEWFILE
 echo "\+ 감상평 댓글로 남겨주시면 힘이됩니다. 🙇" >> $NEWFILE
 
