@@ -34,7 +34,8 @@ jekyll blog에서 medium에서 사용중인 read time을 구현해봅시다.<br>
 우리는 따로 plugin을 설치하지 않고 소스코드를 만들어 추가하는 방식을 알아보자.
 
 ### 소스코드
-아래의 소스코드를 본인의 블로그 `_include/read_time.html` 이라는 파일을 만들어 붙여넣자. (본인 이 원하는 파일명으로 변경해도 된다. 꼭 read_time이 아니여도 됨.)
+아래의 소스코드를 `_include/read_time.html` 만들어 붙여넣자.
+(본인 이 원하는 파일명으로 변경해도 된다. 꼭 read_time이 아니여도 됨.)
 ```html
 <span title="Estimated read time">
   {% raw %}{% assign words = page.content | number_of_words %}
