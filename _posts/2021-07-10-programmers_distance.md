@@ -39,7 +39,7 @@ sitemap :
 
 *1️⃣  양방향 그래프 만들기*
 
-그래프를 만들기 위한 방법은 인접행렬과 인접 리스트 두 가지이다. 아래의 그림을 보자. 해당 그림은 [여기]() 를 통해 가져온 그림이다. 설명도 꽤 잘나와있다.
+그래프를 만들기 위한 방법은 인접행렬과 인접 리스트 두 가지이다. 아래의 그림을 보자. 해당 그림은 [여기](https://www.programiz.com/dsa/graph-adjacency-matrix) 를 통해 가져온 그림이다. 설명도 꽤 잘나와있다.
 
 ![distance_st](/assets/img/graph_structure.png)
 
