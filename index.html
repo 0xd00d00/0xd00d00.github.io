@@ -44,10 +44,6 @@ description: "Bring your A game."
                             {% endfor %}
                         {% endif %}
                     </div>
-									<span class="post-date">
-									<i class="fas fa-hourglass-half"></i>
-										{% include read_time.html%}
-									</span>
 										<span class="post-date">
 										<i class="far fa-calendar-alt"></i>
                     <timedatetime="{{ post.date | date:"%y-%m-%d" }}">{{ post.date | date_to_string }}</time>
