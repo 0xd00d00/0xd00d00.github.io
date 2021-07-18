@@ -12,18 +12,14 @@ sitemap :
 ---
 
 안녕하세요! <span class="doodoo">두두코딩</span> 입니다 ✋ <br>
-오늘은 OpenGL 동기화 개념에 대해 알아보겠습니다.
+오늘은 OpenGL *자원공유* 와 *동기화* 개념에 대해 알아보겠습니다.
+
+해당 포스팅은 [블로그](https://keyou.github.io/blog/2020/06/12/opengl-sync/) 를 참고해 정리했습니다.
 
 🖇 소스코드에 마우스를 올리고 <span class=tip>copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다!
 
 궁금한 점, 보안점 남겨주시면 성실히 답변하겠습니다. 😁 <br>
 \+ 감상평 댓글로 남겨주시면 힘이됩니다. 🙇
-
-해당 포스팅은
-[블로그](https://keyou.github.io/blog/2020/06/12/opengl-sync/) 를 참고해
-정리했습니다.
-
-자 이제부터, OpenGL에서 자원을 *공유* 하고 *동기화*하는 방법에 대해 알아봅시다.
 
 ### OpenGL의 API 명령어 처리 방법
 일반적으로 OpenGL API 명령어들은 비동기적으로 처리된다. 우리는 일반적으로 프로그램을 설계하면서 동기적으로 동작해야 되는 경우를 종종 만나게된다. (뒷 부분에서 예시로 다루도록 하겠다.) 만약 OpenGL 명령어들이 동기적으로 다뤄졌다면, driver cache 등과 같은 것들은 필요 없을 것이다. 비동기적으로 다뤄지기 때문에 해당 명령어들을 driver cache라는 곳에 저장했다가 어느 시점이 되면 한번에 GPU로 전달하게 된다. driver cache에 저장했다가 한번에 내리는 이유는 driver에서 실제 GPU HW에 명령어를 전달하는 기능은 Application이 아닌 Kernel에서 수행하게 된다. 그럴 경우 *mode switch* 라는 것이 발생하게 되는데, 이 *mode switch*가 시스템 성능을 좌지우지 한다. 만약 buffering 개념 없이 사용하게 될경우 엄청난 성능 하락이 발생할 것이다. 따라서, 성능을 개선하기 위해 driver cache라는 곳에 OpenGL API 명령어들을 일정부분 모은 후 한번에 HW에 전달하는 buffering 기법을 보통 사용한다.
