@@ -1,7 +1,7 @@
 ---
 layout: post
 author: doodoo
-title: [프로그래머스][C++][고득점 Kit] 구명보트
+title: "[프로그래머스][C++][고득점 Kit] 구명보트"
 subtitle: "고득점 kit의 구명보트 문제를 Greedy한 방식으로 풀어보자. 🔥"
 date: 2021-07-21
 cover: /assets/img/lifeboat.png

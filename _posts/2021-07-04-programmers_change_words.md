@@ -5,7 +5,7 @@ title: "[프로그래머스][C++][고득점 kit] 단어변환"
 subtitle: "고득점 kit의 단어변환 문제를 BFS를 활용해서 풀어보자. 🔥"
 date: 2021-07-04
 cover: /assets/img/Change_words_dfs.png
-tags: 프로그래머스 알고리즘 고득점kit
+tags: 프로그래머스 알고리즘 고득점Kit
 sitemap :
   changefreq : daily
   priority : 1.0
