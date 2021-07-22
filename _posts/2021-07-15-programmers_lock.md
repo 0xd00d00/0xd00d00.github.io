@@ -158,6 +158,18 @@ bool solution(vector<vector<int>> key, vector<vector<int>> lock) {
 주석이 달린 소스코드이다.
 
 ```cpp
+/**********************
+
+해당 문제 조건
+* key는 M x M(3 ≤ M ≤ 20, M은 자연수)크기 2차원 배열입니다.
+* lock은 N x N(3 ≤ N ≤ 20, N은 자연수)크기 2차원 배열입니다.
+* M은 항상 N 이하입니다.
+* key와 lock의 원소는 0 또는 1로 이루어져 있습니다.
+* 0은 홈 부분, 1은 돌기 부분을 나타냅니다.
+* 자물쇠와 열쇠는 겹치면 안된다.
+
+************************/
+
 #include <string>
 #include <vector>
 
