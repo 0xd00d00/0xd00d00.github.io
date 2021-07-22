@@ -2,10 +2,10 @@
 layout: post
 author: doodoo
 title: "[프로그래머스][C++][고득점 Kit] 가장 먼 노드"
-subtitle: "고득점 kit의 가장 먼 노드 문제를 풀어보자. 🔥"
+subtitle: "고득점 kit의 가장 먼 노드 문제를 Graph를 활용해 풀어보자. 🔥"
 date: 2021-07-10
 cover: /assets/img/graph_distance.png
-tags: 프로그래머스 알고리즘 Graph BFS
+tags: 프로그래머스 알고리즘 고득점Kit
 sitemap :
   changefreq : daily
   priority : 1.0
