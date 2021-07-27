@@ -25,7 +25,8 @@
 			window.onload = function(){
 			  var anchors = document.getElementsByTagName('a');
 				for (var i = 0; i < anchors.length; i++){
-					anchors[i].setAttribute('target', '_blank');
+					if(anchors[i].id != 'nav')
+						anchors[i].setAttribute('target', '_blank');
 				}
 			}
 		</script>
