@@ -79,7 +79,7 @@ int main()
 기반클래스를 활용해 파생클래스를 가리킬 수 있는 개념을 *Upcasting*이라고 했다.
 그렇다면, UpCasting은 언제 활용할까? 아래의 예시를 보자.
 
-![upcasting1](/assets/img/upcasting1.png)
+![upcasting1](/assets/img/upcasting1.png){: height="250px" width="850px"}
 
 위의 그림과 같이, 폴더 구조를 만든다고 생각해보자.
 
