@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://0xd00d00.github.io/sitemap.xml
