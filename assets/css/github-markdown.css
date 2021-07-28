@@ -620,6 +620,17 @@ li p:nth-child(2) {
 	border-radius: .3em;
 }
 
+.markdown-body li code {
+	padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 95%;
+  font-family:  "D2coding-Bold", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #f9f9f9;
+  background: #f9f9f9;
+  color: #e83e8c;
+	border-radius: .3em;
+}
+
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
   color: #005cc5;
   border-color: #005cc5;
