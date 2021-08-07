@@ -220,4 +220,36 @@ int main()
 * Client는 구현에 의존하지 말고 인터페이스에 의존한다.
 
 ### 코드 다듬기
-우리는 약한 결합을 통해 OCP 위배 되는 부분을 변경했다.
+우리는 약한 결합을 통해 OCP 위배 되는 부분을 변경했다. 코드를 약간 다듬어 보자.
+
+```cpp
+class ICamera
+{
+public:
+	virtual void take() = 0;
+	virtual ~ICamera() {}
+};
+
+struct ICamera
+{
+	virtual void take() = 0;
+	virtual ~ICamera() {}
+};
+
+#define interface struct
+
+interface ICamera
+{
+	virtual void take() = 0;
+	virtual ~ICamera() {}
+};
+```
+
+우리는 처음에 `class`를 활용해, `ICamera` 기반클래스를 만들었다. 레거시
+코드같은 경우 `struct`를 활용해 기반클래스를 많이 작성하는데, `struct`의
+접근지정자가 `public`이 default로 사용되기 때문에 한 줄을 줄일 수 있어서 많이
+사용하고 한다.
+
+또한, 추상클래스 같은 경우 규약 혹은 규칙 이라는 의미로 "인터페이스" 라고 많이 지칭하는데, 메크로로 `struct`를 `interface`라는 이름을 재정의해 많이 사용하곤 했다. 우리가 [이전포스팅](https://0xd00d00.github.io/2021/07/05/effective_4.html)에서 배운것과 같이 *메크로 사용*은 하지 않는게 좋기 때문에 해당 변경은 지양해야한다.
+
+끝으로, 가상함수를 쓴다는 것은 "기반클래스"화 하기 때문에 [이전포스팅](https://0xd00d00.github.io/2021/08/05/effective_12.html)에서 배운것과 같이 "가상 소멸자"를 추가해줘야한다.
