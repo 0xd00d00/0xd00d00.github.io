@@ -83,18 +83,18 @@ using namespace std;
 
 // 팰린드롬 확인하는 코드
 int isPalindrome(string s, int left, int right) {
-		// 경계선을 기준으로 loop를 돈다.
+	// 경계선을 기준으로 loop를 돈다.
     while(left >= 0 && right < s.size()) {
-				// 너 팰린드롬이니?
+		// 너 팰린드롬이니?
         if (s[left] != s[right]) break;
 
-				// 양옆으로 늘리기 위한 코드
+		// 양옆으로 늘리기 위한 코드
         left--;
         right++;
     }
-		// 문자열 길이 파악
-		// 혹시 길이 파악이 되지 않는다면
-		// 코드를 따라 ABABA를 디버깅 해보자.
+	// 문자열 길이 파악
+	// 혹시 길이 파악이 되지 않는다면
+	// 코드를 따라 ABABA를 디버깅 해보자.
     return right - left - 1;
 }
 
@@ -102,15 +102,15 @@ int solution(string s)
 {
     int answer=0;
     for (int i = 0; i < s.length(); i++) {
-				// 홀수와 짝수 케이스
+		// 홀수와 짝수 케이스
         int odd = isPalindrome(s, i, i);
 
-				// 짝수는 하나 작게 시작하면 됨.
-				// 이것도 그려보면 쉽게 이해할 수 있다.
+		// 짝수는 하나 작게 시작하면 됨.
+		// 이것도 그려보면 쉽게 이해할 수 있다.
         int even = isPalindrome(s, i - 1, i);
         int is_max = max(odd, even);
 
-				// 가장 긴 팰린드롬 길이 찾기
+		// 가장 긴 팰린드롬 길이 찾기
         answer = max(answer, even);
     }
     return answer;
