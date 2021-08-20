@@ -107,7 +107,7 @@ description: "Bring your A game."
                     {% if forloop.index > site.recommend-condition-size %}
                         {% break %}
                     {% endif %}
-                    <a href="{{ "tags.html#" | append: tag[0] | relative_url }}" class="tag">{{ tag[0]}}</a>
+                    <a href="{{ "tags.html#" | append: tag[0] | relative_url }}" class="tag"><i class="fas fa-tags"></i> {{ tag[0]}}</a>
                 {% endfor %}
             </section>
             {% endif %}

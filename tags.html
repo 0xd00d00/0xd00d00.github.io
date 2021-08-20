@@ -14,7 +14,7 @@ layout: default
         <li>
         {% if site.recommend-tags and site.tags.size>0 %}
             {% for tag in site.tags %}
-            <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}} ({{ tag[1].size }})</a>
+				<a href="#{{ tag[0] }}" class="tag"><i class="fas fa-tags"></i> {{ tag[0]}} ({{ tag[1].size }})</a>
             {% endfor %}
         {% endif %}
         </li>
