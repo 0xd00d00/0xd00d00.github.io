@@ -53,6 +53,7 @@ sitemap :
 
 ### 소스코드
 ```cpp
+#include <algorithm>
 #include <string>
 #include <vector>
 #include <map>
@@ -94,6 +95,7 @@ vector<int> solution(string s) {
 주석을 추가한 코드이다.
 
 ```cpp
+#include <algorithm>
 #include <string>
 #include <vector>
 #include <map>
