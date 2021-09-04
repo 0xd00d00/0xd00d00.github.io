@@ -5,7 +5,7 @@ title: "[Design Pattern][C++] Editbox 만들기 (2)"
 subtitle: "변하지 않는 것과 변하는 것을 분리해야하는 개념을 배우자 🙊"
 date: 2021-09-02
 cover: /assets/img/design_edit_2.png
-tags: haha
+tags: C++ Design_Pattern
 sitemap :
  changefreq : daily
  priority : 1.0
