@@ -66,12 +66,12 @@ public:
 int main()
 {
     Edit edit;
-		// 내가 만든 Validator
-		// 13 자리 까지만 입력받을 수 있다.
-		// 또한 13자리가 아닐 경우 확인 버튼을 누를 수 없다.
+	// 내가 만든 Validator
+	// 13 자리 까지만 입력받을 수 있다.
+	// 또한 13자리가 아닐 경우 확인 버튼을 누를 수 없다.
     LimitDigitValidator v(13);
 
-		// setter를 활용해 내가 만든 validator를 넘겨준다.
+	// setter를 활용해 내가 만든 validator를 넘겨준다.
     edit.setValidator(&v);
 
     while(1)
@@ -205,14 +205,14 @@ public:
 
   string getData()
   {
-    // 기존 데이터가 있다면, 지우고.
+	// 기존 데이터가 있다면, 지우고.
     data.clear();
 
     while(1) {
-      //한 글자씩 읽음
+		//한 글자씩 읽음
       char c = getch();
 
-      // Enter를 입력하면 종료
+		// Enter를 입력하면 종료
       if (c == 10 &&
           (pVal == 0 || pVal->iscomplete(data))) break;
 
@@ -229,12 +229,12 @@ public:
 int main()
 {
     Edit edit;
-		// 내가 만든 Validator
-		// 13 자리 까지만 입력받을 수 있다.
-		// 또한 13자리가 아닐 경우 확인 버튼을 누를 수 없다.
+	// 내가 만든 Validator
+	// 13 자리 까지만 입력받을 수 있다.
+	// 또한 13자리가 아닐 경우 확인 버튼을 누를 수 없다.
     LimitDigitValidator v(13);
 
-		// setter를 활용해 내가 만든 validator를 넘겨준다.
+	// setter를 활용해 내가 만든 validator를 넘겨준다.
     edit.setValidator(&v);
 
     while(1)
