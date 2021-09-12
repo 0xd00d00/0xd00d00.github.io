@@ -92,7 +92,7 @@ Pointer를 가지고 있어야한다. 그렇다면 Table에서는 `PieGraph`와 
 활용해 아래와 같이 공통된 부분을 묶어 인터페이스로 관리하도록 한다. (만약 해당
 개념이 익숙치 않다면 [여기](https://0xd00d00.github.io/2021/07/26/design_pattern_3.html)를 클릭해 알아보자🤗)
 
-![design_pattern upcasting](/assets/img/design_pattern_upcasting.png)
+![design_pattern upcasting](/assets/img/observer_pattern_upcasting.png)
 
 위의 그림과 같이, Interface를 활용해 Graph들을 묶고 해당 인터페이스를 Table에서
 알고 있도록 하면 둘 사이 통신이 가능해진다.
