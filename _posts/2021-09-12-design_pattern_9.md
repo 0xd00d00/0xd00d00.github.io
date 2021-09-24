@@ -1,8 +1,8 @@
 ---
 layout: post
 author: doodoo
-title: "[Design Pattern][C++] Observer Pattern"
-subtitle: "Observer pattern을 알아보자"
+title: "[Design Pattern][C++] Observer Pattern (1)"
+subtitle: "Observer pattern을 알아보자 😀"
 date: 2021-09-12
 cover: /assets/img/observer_pattern.png
 tags: C++ Design_Pattern
@@ -172,7 +172,7 @@ public:
 돌려보자. 돌려볼 경우 Observer의 느낌을 알 수 있을 것이다.
 
 다만, 해당 클래스에서는 좀 더 향상 시킬 수 있는 부분이 남아 있다. 그 부분은
-[다음]()포스팅을 통해 알아보도록 하자.
+[다음](https://0xd00d00.github.io/2021/09/24/design_pattern_10.html)포스팅을 통해 알아보도록 하자.
 
 ### Appendix
 전체적인 소스코드이다. 꼭 직접 돌려보고 확인하고, 작성해보기 바란다.
