@@ -1040,3 +1040,14 @@ color:#61bdcf}
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
+
+.progress-bar {
+    background: linear-gradient(to right, #d00d00 var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 3px;
+    z-index: 9000;
+}

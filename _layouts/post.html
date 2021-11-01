@@ -3,6 +3,8 @@
 {% include post-head.html %}
 
 <body>
+ <!-- This is the bar which shows scroll percentage -->
+  <div class="progress-bar"></div>
   <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
 
   <header
@@ -160,6 +162,27 @@
 
   <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/index.min.js" | relative_url }}"></script>
+
+  <!-- percentage! -->
+  <script>
+     var element = document.documentElement,
+      body = document.body,
+      scrollTop = 'scrollTop',
+      scrollHeight = 'scrollHeight',
+      progress = document.querySelector('.progress-bar'),
+      scroll;
+
+    document.addEventListener('scroll', function() {
+      scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+      progress.style.setProperty('--scroll', scroll + '%');
+
+      if (document.getElementsByTagName('Header')[0].classList[2] === "headerDown") {
+        progress.style.top = '57px';
+      } else {
+        progress.style.top = '0px';
+      }
+    });
+  </script>
 </body>
 
 </html>
