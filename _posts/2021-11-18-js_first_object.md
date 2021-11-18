@@ -1,8 +1,8 @@
 ---
 layout: post
 author: doodoo
-title: input your title
-subtitle: input your title
+title: "[Javascript] 1급 객체"
+subtitle: "JS에서 언급하는 1급 객체에 대해 알아보자🤔"
 date: 2021-11-18
 cover: /assets/img/default.png
 tags: haha
