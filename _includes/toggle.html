@@ -1,0 +1,19 @@
+{% assign title = include.title %}
+{% unless title %}
+{% assign title = "확인" %}
+{% endunless %}
+
+<a id="mk_toggle" class="mk_toggle hvr-icon-fade hvr-underline-from-left" href="#">
+	 <i class="fa fa-check hvr-icon"></i> {{ title }}</a>
+<div id="mk_toggle_sub" markdown="1">
+
+	{{ include.content  }}
+
+</div>
+
+<script>
+	$("#mk_toggle").click((function (e) {
+		e.preventDefault();
+		$("#mk_toggle_sub").slideToggle();
+	}));
+</script>

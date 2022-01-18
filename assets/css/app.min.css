@@ -1051,3 +1051,7 @@ color:#61bdcf}
     height: 3px;
     z-index: 9000;
 }
+
+#mk_toggle_sub {
+	display: none;
+}
