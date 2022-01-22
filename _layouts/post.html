@@ -50,9 +50,11 @@
     <h2 class="post-subtitle">{{ page.subtitle }}</h2>
     {% endif %}
 
+	<div class="col-mg-2 col-lg-2"></div>
     <article class="markdown-body">
       {{ page.content }}
     </article>
+	<div class="col-mg-2 col-lg-2"></div>
 
     {% if site.social-share %}
     <div class="social-share-wrapper">
@@ -176,11 +178,30 @@
       scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
       progress.style.setProperty('--scroll', scroll + '%');
 
-      if (document.getElementsByTagName('Header')[0].classList[2] === "headerDown") {
+	  if (document.getElementsByTagName('Header')[0].classList[2] === "headerDown" && window.innerWidth > 695) {
         progress.style.top = '57px';
       } else {
         progress.style.top = '0px';
       }
+    });
+
+	jQuery(document).ready(function ($) {
+	  	$(window).on("resize load",function(e) {
+			console.log($(window).width());
+		  if ($(window).width() < 695) {
+			if ($('.headerDown')) {
+				$('.g-header').removeClass('.headerDown');
+			}
+		  }
+		  $mkbody = $('.markdown-body');
+		  if ($(window).width() > 1500) {
+			$mkbody.removeClass("col-md-8 col-lg-8");
+			$mkbody.addClass("col-md-6 col-lg-6");
+		  } else {
+			$mkbody.removeClass("col-md-6 col-lg-6");
+			$mkbody.addClass("col-md-8 col-lg-8");
+		  }
+		})
     });
   </script>
 </body>
