@@ -684,6 +684,7 @@ li p:nth-child(2) {
 
 .markdown-body a[id=mk_toggle]{
 	box-shadow: none;
+	text-decoration: none !important;
 }
 
 .markdown-body a[id=mk_toggle]:active
@@ -691,5 +692,4 @@ li p:nth-child(2) {
 .markdown-body a[id=mk_toggle]:link,
 .markdown-body a[id=mk_toggle]:hover{
 	color: black;
-	text-decoration: none !important;
 }

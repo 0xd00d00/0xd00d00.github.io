@@ -5,7 +5,7 @@
 
 <a id="mk_toggle" class="mk_toggle hvr-icon-fade hvr-underline-from-left" href="#">
 	 <i class="fa fa-check hvr-icon"></i> {{ title }}</a>
-<div id="mk_toggle_sub" markdown="1">
+<div class="mk_toggle_sub" markdown="1">
 
 	{{ include.content  }}
 
@@ -14,6 +14,6 @@
 <script>
 	$("#mk_toggle").click((function (e) {
 		e.preventDefault();
-		$("#mk_toggle_sub").slideToggle();
+		$(".mk_toggle_sub").slideToggle();
 	}));
 </script>
