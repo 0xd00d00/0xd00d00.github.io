@@ -3,8 +3,8 @@
 {% assign title = "확인" %}
 {% endunless %}
 
-<a id="mk_toggle" class="mk_toggle hvr-icon-fade hvr-underline-from-left" href="#">
-	 <i class="fa fa-check hvr-icon"></i> {{ title }}</a>
+<a id="mk_toggle" class="mk_toggle hvr-icon-wobble-horizontal hvr-underline-from-left" href="#">
+	 <i class="far fa-hand-point-right hvr-icon"></i> {{ title }}</a>
 <div class="mk_toggle_sub" markdown="1">
 
 	{{ include.content  }}
@@ -15,5 +15,13 @@
 	$("#mk_toggle").click((function (e) {
 		e.preventDefault();
 		$(".mk_toggle_sub").slideToggle();
+
+		if ($('.far').hasClass('fa-hand-point-right')) {
+			$('.far').removeClass('fa-hand-point-right');
+			$('.far').addClass('fa-hand-point-down');
+		} else {
+			$('.far').removeClass('fa-hand-point-down');
+			$('.far').addClass('fa-hand-point-right');
+		}
 	}));
 </script>

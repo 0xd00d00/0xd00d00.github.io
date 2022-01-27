@@ -684,6 +684,8 @@ li p:nth-child(2) {
 
 .markdown-body a[id=mk_toggle]{
 	box-shadow: none;
+	font-family: 'NotoSans-Bold';
+    font-size: 1.05em;
 	text-decoration: none !important;
 }
 
