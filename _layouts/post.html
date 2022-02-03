@@ -50,11 +50,11 @@
     <h2 class="post-subtitle">{{ page.subtitle }}</h2>
     {% endif %}
 
-	<div class="col-mg-2 col-lg-2"></div>
-    <article class="markdown-body">
+	<div class="col-md-2 col-lg-2"></div>
+    <article class="markdown-body col-md-6 col-lg-6">
       {{ page.content }}
     </article>
-	<div class="col-mg-2 col-lg-2"></div>
+	<div class="col-md-2 col-lg-2"></div>
 
     {% if site.social-share %}
     <div class="social-share-wrapper">
@@ -196,7 +196,8 @@
 		  $mkbody = $('.markdown-body');
 		  if ($(window).width() > 1500) {
 			$mkbody.removeClass("col-md-8 col-lg-8");
-			$mkbody.addClass("col-md-6 col-lg-6");
+			if (!$mkbody.hasClass("col-md-6"))
+				$mkbody.addClass("col-md-6 col-lg-6");
 		  } else {
 			$mkbody.removeClass("col-md-6 col-lg-6");
 			$mkbody.addClass("col-md-8 col-lg-8");
