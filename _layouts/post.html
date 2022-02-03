@@ -54,7 +54,13 @@
     <article class="markdown-body col-md-6 col-lg-6">
       {{ page.content }}
     </article>
-	<div class="col-md-2 col-lg-2"></div>
+	<!-- TOC -->
+	<div id="div-toc" class="col-md-3 col-lg-3 side-toc">
+		<h5 class="toc-head">
+			<a>Table of Content</a>
+		</h5>
+		<ui class="toc-body"></ui>
+	</div>
 
     {% if site.social-share %}
     <div class="social-share-wrapper">
@@ -184,8 +190,30 @@
         progress.style.top = '0px';
       }
     });
+  </script>
+
+  <!-- TOC -->
+  <script>
+  	function generateTOC(selector) {
+		let _containerSelector = 'article.markdown-body';
+	 	let _h_tags = $(_containerSelector).find('h1,h2,h3,h4,h5,h6'), n, i, t, c, l;
+
+		$(selector).html('');
+
+		_h_tags.each(function() {
+			n = $(this).prop('tagName').toLowerCase();
+			i = "#" + $(this).prop('id');
+		    t = $(this).text();
+			c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+			l = $('<li class="' + n + '_nav"></li>').append(c);
+			$(selector).append(l);
+		});
+	}
 
 	jQuery(document).ready(function ($) {
+		const TOC_Criteria = 1370;
+		$TOC = $('.side-toc');
+		generateTOC('.toc-body');
 	  	$(window).on("resize load",function(e) {
 			console.log($(window).width());
 		  if ($(window).width() < 695) {
@@ -194,15 +222,31 @@
 			}
 		  }
 		  $mkbody = $('.markdown-body');
-		  if ($(window).width() > 1500) {
+		  if ($(window).width() > TOC_Criteria) {
+			$TOC.css('display','block');
 			$mkbody.removeClass("col-md-8 col-lg-8");
 			if (!$mkbody.hasClass("col-md-6"))
 				$mkbody.addClass("col-md-6 col-lg-6");
 		  } else {
+			$TOC.css('display','none');
 			$mkbody.removeClass("col-md-6 col-lg-6");
 			$mkbody.addClass("col-md-8 col-lg-8");
 		  }
-		})
+		});
+
+		$(window).on("scroll", function() {
+			 let currentTop = $(window).scrollTop();
+			 let bannerHeight = $('.g-banner').height();
+		     let subTitleHeight = $('.post-subtitle').height();
+			 let scrollHeight = bannerHeight + subTitleHeight;
+
+			 console.log(currentTop + " " + scrollHeight);
+			 if (currentTop > scrollHeight && $(window).width() > TOC_Criteria) {
+				$TOC.addClass('fixed');
+			 } else {
+				$TOC.removeClass('fixed');
+			 }
+		});
     });
   </script>
 </body>
