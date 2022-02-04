@@ -56,7 +56,7 @@
     </article>
 	<!-- TOC -->
 	<div id="div-toc" class="col-md-3 col-lg-3 side-toc post-container">
-		<h5 class="toc-head">
+		<h5 class="toc-head hvr-underline-from-center">
 			<a>Table of Content</a>
 		</h5>
 		<ui class="toc-body"></ui>
@@ -258,6 +258,15 @@
 			end: null,
 			scrollChange: false,
 			padding: 50
+		});
+
+    	$('.markdown-body a').attr('target', '_blank');
+
+		$('.toc-head a').click(function(){
+			if ($(window).scrollTop() != 0)
+				$('html, body').animate({scrollTop: 0}, 1000);
+			else
+				$('html, body').animate({scrollTop: document.body.scrollHeight}, 1000);
 		});
 	});
   </script>

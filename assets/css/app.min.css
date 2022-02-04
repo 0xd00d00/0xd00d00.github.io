@@ -1147,6 +1147,7 @@ color:#61bdcf}
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	color: #bfbfbf !important;
+	content: "Table of Content"
 }
 
 .toc-body li a:hover {
@@ -1160,4 +1161,8 @@ color:#61bdcf}
 
 ::selection {
 	color: #fff;
+}
+
+.toc-head a:hover{
+  color: #2d2b2b !important;
 }
