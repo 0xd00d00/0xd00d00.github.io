@@ -202,7 +202,6 @@
 				}
 			}
 
-			console.log(windowTop + " " + clicked );
 			if (!windowTop || (windowTop < 626 && clicked)) {
 				this.$elem.find('.' + this.config.currentClass).removeClass(this.config.currentClass);
 				this.$elem.find('li:first').addClass(this.config.currentClass);

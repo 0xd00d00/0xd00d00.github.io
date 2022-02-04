@@ -1131,6 +1131,10 @@ color:#61bdcf}
 	pointer-events: none;
 }
 
+.toc-body li {
+	padding-bottom: 5px;
+}
+
 .toc-body li a {
 	padding-left: 10px;
 	max-width: 180px;
