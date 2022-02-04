@@ -204,7 +204,7 @@
 			n = $(this).prop('tagName').toLowerCase();
 			i = "#" + $(this).prop('id');
 		    t = $(this).text();
-			c = $('<a href="' + i + '" rel="nofollow" class="hvr-grow">' + t + '</a>');
+			c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
 			l = $('<li class="' + n + '_nav"></li>').append(c);
 			$(selector).append(l);
 		});
@@ -215,7 +215,6 @@
 		$TOC = $('.side-toc');
 		generateTOC('.toc-body');
 	  	$(window).on("resize load",function(e) {
-			console.log($(window).width());
 		  if ($(window).width() < 695) {
 			if ($('.headerDown')) {
 				$('.g-header').removeClass('.headerDown');
@@ -240,7 +239,6 @@
 		     let subTitleHeight = $('.post-subtitle').height();
 			 let scrollHeight = bannerHeight + subTitleHeight;
 
-			 console.log(currentTop + " " + scrollHeight);
 			 if (currentTop > scrollHeight && $(window).width() > TOC_Criteria) {
 				$TOC.addClass('fixed');
 			 } else {
@@ -250,16 +248,16 @@
 
 		$('.toc-body').onePageNav({
 			currentClass: "active",
-			changeHash: !1,
+			changeHash: false,
 			easing: "swing",
 			filter: '',
-			scrollSpeed: 700,
+			scrollSpeed: 800,
 			scrollOffset: 0,
-			scrollThreadhold: .2,
+			scrollThreadhold: 0.5,
 			begin: null,
 			end: null,
-			scrollChange: null,
-			padding: 65
+			scrollChange: false,
+			padding: 50
 		});
 	});
   </script>

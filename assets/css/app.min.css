@@ -1118,6 +1118,19 @@ color:#61bdcf}
 	font-size: 12.3px;
 }
 
+.side-toc .toc-body .active {
+	border-radius: 4px;
+    background-color: #F5F5F5;
+	max-width: 200px;
+}
+
+.side-toc .toc-body .active a{
+	color: #d00d00 !important;
+	font-weight: bold;
+	font-size: 1.2em;
+	pointer-events: none;
+}
+
 .toc-body li a {
 	padding-left: 10px;
 	max-width: 180px;
@@ -1130,6 +1143,15 @@ color:#61bdcf}
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	color: #bfbfbf !important;
+}
+
+.toc-body li a:hover {
+	-webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+	color: #2d2b2b !important;
 }
 
 ::selection {

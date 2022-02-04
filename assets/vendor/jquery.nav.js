@@ -33,6 +33,7 @@
 	};
 
 	let lastScroll = 0;
+	let bottomMargin = 15;
 	// the plugin prototype
 	OnePageNav.prototype = {
 		defaults: {
@@ -198,10 +199,17 @@
 					}
 				}
 			}
+
+			if (!windowTop) {
+				this.$elem.find('.' + this.config.currentClass).removeClass(this.config.currentClass);
+				this.$elem.find('li:first').addClass(this.config.currentClass);
+			}
+
+			lastScroll = windowTop;
 		},
 
 		scrollTo: function(target, callback) {
-			var offset = $(target).offset().top;
+			var offset = $(target).offset().top - bottomMargin;
 
 			if (offset <= lastScroll) {
 				offset = offset - this.config.padding;
