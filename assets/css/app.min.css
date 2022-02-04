@@ -1073,7 +1073,7 @@ color:#61bdcf}
 	font-family: NotoSans-Bold;
 	color: #878282 !important;
 	font-size: 1.25em !important;
-	padding-bottom: 10px !important;
+	padding-bottom: 15px !important;
 }
 
 .side-toc {
@@ -1157,6 +1157,3 @@ color:#61bdcf}
 ::selection {
 	color: #fff;
 }
-
-
-

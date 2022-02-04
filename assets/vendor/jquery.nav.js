@@ -34,6 +34,7 @@
 
 	let lastScroll = 0;
 	let bottomMargin = 15;
+	let clicked = false;
 	// the plugin prototype
 	OnePageNav.prototype = {
 		defaults: {
@@ -153,6 +154,7 @@
 					self.config.begin();
 				}
 
+				clicked = true;
 				//Change the highlighted nav item
 				self.adjustNav(self, $parent);
 
@@ -200,12 +202,14 @@
 				}
 			}
 
-			if (!windowTop) {
+			console.log(windowTop + " " + clicked );
+			if (!windowTop || (windowTop < 626 && clicked)) {
 				this.$elem.find('.' + this.config.currentClass).removeClass(this.config.currentClass);
 				this.$elem.find('li:first').addClass(this.config.currentClass);
 			}
 
 			lastScroll = windowTop;
+			clicked = false;
 		},
 
 		scrollTo: function(target, callback) {
