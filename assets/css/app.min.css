@@ -1119,8 +1119,8 @@ color:#61bdcf}
 }
 
 .side-toc .toc-body .active {
-	border-radius: 4px;
-    background-color: #F5F5F5;
+	border-radius: 6px;
+    background-color: #eaeaea;
 	max-width: 200px;
 }
 
