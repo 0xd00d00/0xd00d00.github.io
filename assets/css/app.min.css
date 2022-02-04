@@ -1072,7 +1072,7 @@ color:#61bdcf}
 .toc-head {
 	font-family: NotoSans-Bold;
 	color: #878282 !important;
-	font-size: 1.3em !important;
+	font-size: 1.25em !important;
 	padding-bottom: 10px !important;
 }
 
@@ -1127,7 +1127,7 @@ color:#61bdcf}
 .side-toc .toc-body .active a{
 	color: #d00d00 !important;
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.15em;
 	pointer-events: none;
 }
 
