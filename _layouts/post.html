@@ -55,7 +55,7 @@
       {{ page.content }}
     </article>
 	<!-- TOC -->
-	<div id="div-toc" class="col-md-3 col-lg-3 side-toc">
+	<div id="div-toc" class="col-md-3 col-lg-3 side-toc post-container">
 		<h5 class="toc-head">
 			<a>Table of Content</a>
 		</h5>
@@ -204,7 +204,7 @@
 			n = $(this).prop('tagName').toLowerCase();
 			i = "#" + $(this).prop('id');
 		    t = $(this).text();
-			c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+			c = $('<a href="' + i + '" rel="nofollow" class="hvr-grow">' + t + '</a>');
 			l = $('<li class="' + n + '_nav"></li>').append(c);
 			$(selector).append(l);
 		});
@@ -247,7 +247,21 @@
 				$TOC.removeClass('fixed');
 			 }
 		});
-    });
+
+		$('.toc-body').onePageNav({
+			currentClass: "active",
+			changeHash: !1,
+			easing: "swing",
+			filter: '',
+			scrollSpeed: 700,
+			scrollOffset: 0,
+			scrollThreadhold: .2,
+			begin: null,
+			end: null,
+			scrollChange: null,
+			padding: 65
+		});
+	});
   </script>
 </body>
 

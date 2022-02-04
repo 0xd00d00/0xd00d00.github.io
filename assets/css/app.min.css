@@ -1071,7 +1071,9 @@ color:#61bdcf}
 
 .toc-head {
 	font-family: NotoSans-Bold;
-	color: #cccccc !important;
+	color: #878282 !important;
+	font-size: 1.3em !important;
+	padding-bottom: 10px !important;
 }
 
 .side-toc {
@@ -1107,13 +1109,13 @@ color:#61bdcf}
 
 .toc-body .h3_nav {
 	margin-left: 0;
-	font-size: 13px;
+	font-size: 13.5px;
 	font-weight: bold;
 }
 
 .toc-body .h4_nav {
 	margin-left: 12px;
-	font-size: 12px;
+	font-size: 12.3px;
 }
 
 .toc-body li a {
@@ -1127,6 +1129,11 @@ color:#61bdcf}
 	text-decoration: none;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	color: #bfbfbf !important;
+}
+
+::selection {
+	color: #fff;
 }
 
 
