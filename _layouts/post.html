@@ -54,13 +54,6 @@
     <article class="markdown-body col-md-6 col-lg-6">
       {{ page.content }}
     </article>
-	<!-- TOC -->
-	<div id="div-toc" class="col-md-3 col-lg-3 side-toc post-container">
-		<h5 class="toc-head hvr-underline-from-center">
-			<a>Table of Content</a>
-		</h5>
-		<ui class="toc-body"></ui>
-	</div>
 
     {% if site.social-share %}
     <div class="social-share-wrapper">
@@ -135,6 +128,13 @@
 
   {% include footer.html %}
 
+  <!-- TOC -->
+  <div id="div-toc" class="col-md-3 col-lg-3 side-toc post-container">
+	<h5 class="toc-head hvr-underline-from-center">
+		<a>Table of Content</a>
+	</h5>
+	<ui class="toc-body"></ui>
+  </div>
   <script src="{{ "/assets/js/social-share.min.js" | relative_url }}"></script>
   <script>
     socialShare('.social-share', {

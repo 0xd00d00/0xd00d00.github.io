@@ -897,6 +897,10 @@ color:#61bdcf}
 		font-weight:700;
 		color:#a5a8b0;
 	opacity:1}
+
+	.g-header .g-nav>ul>li>a:active{
+		text-decoration: none;
+	}
 	.author-detail .author-card .sns-links{
 	margin-top:24px}
 	.author-detail .author-card .sns-links li{
@@ -1083,7 +1087,7 @@ color:#61bdcf}
 	display: none;
 	padding-bottom: 40px;
 	width: 195px;
-	top: 90px;
+	top: 385px;
 	right: -2%;
 }
 

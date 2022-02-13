@@ -627,8 +627,8 @@ li p:nth-child(2) {
 	border-radius: .3em;
 }
 
-/*
-.markdown-body li code {
+
+.markdown-body .highlighter-rouge{
 	padding: 0.2em 0.4em;
   margin: 0;
   font-size: 95%;
@@ -638,7 +638,7 @@ li p:nth-child(2) {
   color: #e83e8c;
 	border-radius: .3em;
 }
-*/
+
 
 .markdown-body .full-commit .btn-outline:not(:disabled):hover {
   color: #005cc5;
