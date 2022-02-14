@@ -10,6 +10,7 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
+  archive: '/archive.html'
 
 # [doodoo] if you append the page, write here.
 #haha: '/'

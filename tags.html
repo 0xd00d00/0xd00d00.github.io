@@ -5,7 +5,7 @@ layout: default
 
 {% include header.html %}
 
-<div class="g-banner tags-banner " style="background :linear-gradient(#537895,#09203f);" data-theme="{{ site.theme-color }}">
+<div class="g-banner tags-banner " style="background :linear-gradient(#64889f,#0f51a9);" data-theme="{{ site.theme-color }}">
     <h2>TAGS</h2>
 </div>
 
@@ -20,7 +20,7 @@ layout: default
         </li>
         {% for tag in site.tags %}
         <li>
-					<span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}  」</span>
+					<span class="tag-name" id="{{ tag[0] }}">「 {{ tag[0] }}  」</span>
             {% for post in tag[1] %}
             <a class="tag-post" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% endfor %}
