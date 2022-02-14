@@ -862,7 +862,7 @@ color:#61bdcf}
 	  font-size: 24px;
     }
     .archive li a{
-	  font-size: 19px !important;
+	  font-size: 18px !important;
     }
    .archive {
      width: 70% !important;
@@ -910,7 +910,7 @@ color:#61bdcf}
 	  font-size: 30px;
     }
     .archive h2 {
-	  font-size: 21px;
+	  font-size: 23px;
     }
     .archive li{
 	  font-size: 15px;
@@ -1104,10 +1104,10 @@ color:#61bdcf}
      font-size: 30px;
    }
    .archive h2 {
-     font-size: 21px;
+     font-size: 20px !important;
    }
    .archive li{
-     font-size: 15px;
+     font-size: 15px !important;
    }
    .archive {
      width: 100% !important;
@@ -1290,12 +1290,12 @@ color:#61bdcf}
 .archive li{
    padding:0 20px 5px;
    margin-bottom:10px;
+   font-size:18px;
    font-family: 'NotoSans-Regular';
 }
 
 .archive li a{
    display:block;
-   font-size:19px;
    color: #464545;
 }
 
