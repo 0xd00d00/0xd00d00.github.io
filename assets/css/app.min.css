@@ -837,8 +837,8 @@ color:#61bdcf}
     .archive h2 {
 	  font-size: 25px;
     }
-    .archive li{
-	  font-size: 20px;
+    .archive li a{
+	  font-size: 21px !important;
     }
    .archive {
      width: 50% !important;
@@ -859,13 +859,13 @@ color:#61bdcf}
 	  font-size: 36px;
     }
     .archive h2 {
-	  font-size: 23px;
+	  font-size: 24px;
     }
-    .archive li{
-	  font-size: 18px;
+    .archive li a{
+	  font-size: 19px !important;
     }
    .archive {
-     width: 60% !important;
+     width: 70% !important;
     }
 	.g-container{
 	width:auto}
@@ -910,10 +910,10 @@ color:#61bdcf}
 	  font-size: 30px;
     }
     .archive h2 {
-	  font-size: 18px;
+	  font-size: 21px;
     }
     .archive li{
-	  font-size: 14px;
+	  font-size: 15px;
     }
    .archive {
      width: 80% !important;
@@ -1010,10 +1010,10 @@ color:#61bdcf}
 	  font-size: 30px;
     }
     .archive h2 {
-	  font-size: 18px;
+	  font-size: 21px;
     }
     .archive li{
-	  font-size: 14px;
+	  font-size: 15px;
     }
    .archive {
      width: 90% !important;
@@ -1104,10 +1104,10 @@ color:#61bdcf}
      font-size: 30px;
    }
    .archive h2 {
-     font-size: 18px;
+     font-size: 21px;
    }
    .archive li{
-     font-size: 14px;
+     font-size: 15px;
    }
    .archive {
      width: 100% !important;
@@ -1295,6 +1295,7 @@ color:#61bdcf}
 
 .archive li a{
    display:block;
+   font-size:19px;
    color: #464545;
 }
 
