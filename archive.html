@@ -43,14 +43,14 @@ layout: default
       <a href="{{ post.link }}">
       {% else %}
       <a href="{{ site.baseurl }}{{ post.url }}">
-      <time style="display :none">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
       {% endif %}
         {{ post.title }}
       </a>
     </li>
   {% endfor %}
 </ul>
-
+{% include footer.html %}
 <script>
    jQuery(document).ready(function ($) {
      $(window).on('load resize',function() {
@@ -62,5 +62,3 @@ layout: default
      })
    });
 </script>
-
-{% include footer.html %}
