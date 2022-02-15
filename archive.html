@@ -52,14 +52,20 @@ layout: default
 </ul>
 {% include footer.html %}
 <script>
-   jQuery(document).ready(function ($) {
-     $(window).on('load resize',function() {
-	   console.log('load ' + $(window).width());
+   function displayCheck()
+   {
        if ($(window).width() < 695) {
 		   $('time').css('display','none');
        } else {
 		   $('time').css('display','block');
        }
-     })
+
+   }
+
+   $(document).ready(function ($) {
+     $(window).on('resize',displayCheck);
    });
+
+   window.addEventListener('DOMContentLoaded', displayCheck);
+
 </script>
