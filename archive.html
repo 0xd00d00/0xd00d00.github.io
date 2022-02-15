@@ -55,9 +55,9 @@ layout: default
    jQuery(document).ready(function ($) {
      $(window).on('load resize',function() {
        if ($(window).width() < 695) {
-           $('li time').hide();
+		   $('time').css('display','none');
        } else {
-           $('li time').show();
+		   $('time').css('display','block');
        }
      })
    });
