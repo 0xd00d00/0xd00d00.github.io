@@ -54,6 +54,7 @@ layout: default
 <script>
    jQuery(document).ready(function ($) {
      $(window).on('load resize',function() {
+	   console.log('load ' + $(window).width());
        if ($(window).width() < 695) {
 		   $('time').css('display','none');
        } else {
