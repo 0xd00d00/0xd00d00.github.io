@@ -50,4 +50,17 @@ layout: default
     </li>
   {% endfor %}
 </ul>
+
+<script>
+   jQuery(document).ready(function ($) {
+     $(window).on("resize load",function(e) {
+       if ($(window).width() < 695) {
+           $('li time').hide();
+       } else {
+           $('li time').show();
+       }
+     })
+   });
+</script>
+
 {% include footer.html %}
