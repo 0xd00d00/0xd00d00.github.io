@@ -13,7 +13,7 @@ sitemap :
 안녕하세요! <span class="doodoo">두두코딩</span> 입니다 ✋ <br>
 오늘은 Chromium build 하는 방법에 대해 알아보겠습니다.
 
-🖇 소스코드에 마우스를 올리고 <span class="tip">copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다! 
+🖇 소스코드에 마우스를 올리고 <span class="tip">copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다!
 
 궁금한 점, 보안점 남겨주시면 성실히 답변하겠습니다. 😁 <br>
 \+ 감상평 댓글로 남겨주시면 힘이됩니다. 🙇
@@ -178,12 +178,7 @@ $ gn gen out/Default
 $ ninja -C out/Default chrome
 ```
 
-위의 명령어들을 치게 되면 빌드가 된다. 다만, 엄청 오래 걸린다. 특히, 성능이 좋지
-않으면 자기전에 돌리고 자는 것을 추천한다. 개인적으로 mac 환경에서 작업을 많이
-곧 mac 관련 빌드도 포스팅 하도록 하겠다.
+위의 명령어들을 치게 되면 빌드가 된다. 다만, 엄청 오래 걸린다. 특히, 성능이 좋지 않으면 자기전에 돌리고 자는 것을 추천한다.
 
-추가적으로, 본인은 좀 더 빌드를 빨리 할 수 있는 ccache를 사용하고 있는데, 이
-부분은 정리가 완료되면 ~~[여기]()~~ 포스팅 하도록 하겠다.
-
-#### Reference
+### Reference
 [Google Document](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)
