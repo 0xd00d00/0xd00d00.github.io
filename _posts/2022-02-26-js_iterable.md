@@ -201,3 +201,5 @@ for (const num of fibonacci) {
 
 다만, `next()`수행 시 동작이 오래 걸릴 경우 전체적인 성능이 떨어질 수 있다.
 
+### Reference
+[DeepDive](http://www.yes24.com/Product/Goods/92742567)
