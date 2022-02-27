@@ -316,5 +316,72 @@ foo();
 
 다 같이 수행하지만, 모두가 끝날 떄까지 걸리는 시간이 3초이다.
 
+#### 에러처리
+비동기 처리를 위한 콜백 패턴의 단점 중 가장 심각한 것은 *에러처리*가 곤란하다는 점이다. 에러같은 경우 *호출자* 즉, 실제 함수를 호출한 호출자 방향으로 전파되기 때문에 비동기 함수를 활용한 *콜백함수* 같은 경우 에러처리가 곤라했다.
+
+하지만, async 같은 경우 명시적으로 *비동기*를 요청하며, generator를 반환 받는다. 즉, 호출자가 *콜백함수*가 아니라 *함수 호출자* 이기 때문에 `try..catch` 문이 사용가능하다.
+
+구체적으로, 비동기 함수와 async 함수의 차이를 확인해보자.
+
+*비동기함수 에러전파*
+
+```js
+try {
+	// 콜백함수와 setTimeout 컨텍스트가 다름..
+	// 에러 전파를 받을 수 없다.
+	setTimeout(() => { throw new Error('Error!'); }, 1000);
+} catch (e) {
+	// 에러케치 불가능
+	console.log('캐치한 에러!', e);
+}
+```
+
+*async 함수 에러 전파*
+
+```
+// node js  기준 예시
+
+const fetch = require('node-fetch');
+
+const foo = async() => {
+	try {
+		const wrongUrl = 'http://navar.com';
+
+		const response = await fetch(wrongUrl);
+		const data = await response.json();
+
+		console.log(data);
+	} catch (err) {
+		// 케치 가능
+		console.log(error);
+	}
+};
+
+foo();
+```
+
+`async`함수 내에서 `catch`문을 사용해 에러처리를 하지 않으면 `async`함수는 발생한 에러를 reject하는 `promise`를 반환한다. `Promise.prototype.catch` 후속처리 가능하다.
+
+```js
+const fetch = require('node-fetch');
+
+const foo = async() => {
+	try {
+		const wrongUrl = 'http://navar.com';
+
+		const response = await fetch(wrongUrl);
+		const data = await response.json();
+
+		console.log(data);
+	}
+	// 에러 케치 안할 경우
+	// reject promise 반환
+};
+
+foo()
+	.then(console.log)
+	.catch(console.error); // 에러 캐치를 내부적으로 하는 promise!
+```
+
 ### Reference
 [DeepDive](http://www.yes24.com/Product/Goods/92742567)
