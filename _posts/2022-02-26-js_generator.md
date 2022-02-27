@@ -338,7 +338,7 @@ try {
 
 *async 함수 에러 전파*
 
-```
+```js
 // node js  기준 예시
 
 const fetch = require('node-fetch');
