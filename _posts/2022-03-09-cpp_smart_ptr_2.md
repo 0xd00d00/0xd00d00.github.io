@@ -1,7 +1,7 @@
 ---
 layout: post
 author: doodoo
-title: "[C++][Modern C++] shared_ptr 스마트포인터"
+title: "[C++][Modern C++] shared_ptr 스마트포인터 (i)"
 subtitle: "shared_ptr 사용방법 및 구조에 대해 알아보자"
 date: 2022-03-09
 cover: /assets/img/default.png
