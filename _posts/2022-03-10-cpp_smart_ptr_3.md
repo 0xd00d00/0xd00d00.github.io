@@ -81,3 +81,90 @@ int main() {
 	shared_ptr<Car> p1(make_shared<Car>());
 }
 ```
+
+최대한 `make_shared`를 활용해 코드를 작성하도록 하자. `shared_ptr`를 사용할 경우
+추가적인 문제점이 존재하는데, 아래를 통해 알아보자.
+
+### Raw pointer 초기화 시 문제점
+`shared_ptr`에서 raw pointer를 활용해 초기화 할 경우 버그가 발생할 수 있다.
+따라서, raw pointer 초기화 하는 부분은 신중해야된다.
+
+아래의 예시 코드를 통해 알아보도록 하자.
+
+```cpp
+#include <iostream>
+#include <memory>
+#include "car.h"
+
+using namespace std;
+
+int main() {
+	Car* p = new Car;
+
+	shared_ptr<Car> sp1(p);
+
+	// 제어 블록 공유
+	// use_count 2
+	shared_ptr<Car> sp2(sp1);
+
+	// 만약 raw pointer로 추가하게 될 경우는
+	shared_ptr<Car> sp2(p);
+}
+```
+
+위의 코드를 보면, `shared_ptr`를 생성하는데 `p`라는 raw pointer를 활용해
+초기화를 하고 있다. 첫 번째 `sp1` 초기화 같은 경우 문제 없이 잘 동작한다.
+
+`sp2`를 `sp1`으로 초기화하더라도, 아래의 그림과 같이 제어 블록을 공유하기 때문에
+문제 없다. 예를 들어 포인터가 지워지더라도, 제어블럭 내 `use_count`가 0이 아니라
+대상 객체가 지워지지 않는다.
+
+![sptr6](/assets/img/sptr6.png)
+
+위의 그림을 참조해보면, `shared_ptr<Car> sp2(sp1)`와 같이 작성할 경우
+`shared_ptr`를 통해 control block을 공유하기 때문에 실행 시 문제 없이 동작한다.
+하지만 아래의 경우와 같이 raw pointer로 각자 초기화 할 경우 문제가 발생한다.
+
+![sptr7](/assets/img/sptr7.png)
+
+위의 그림과 같이, raw pointer로 초기화 할 경우 각자의 `control block`을 만들게
+되는데, 이 때 포인터가 제거 될 경우 `use_count`는 *1*이라 대상객체 자체가
+*제거*되 버리는 문제가 된다.
+
+예를들어, `sp1`과 `sp2`가 각각 `p`라는 raw pointer로 초기화 됐을 경우, `sp1`이
+제거된다면 대상객체가 파괴된다. 따라서, `sp2`가 가리키는 객체는 사라지게 되고
+잘못된 포인터 값 (찾아가도 대상객체 없음)을 갖게 된다.
+
+이를 막기 위해서는 아래와 같이 *RAII (Resource Acquisition Is Initialization)*
+즉, 생성하면서 초기화하도록 작성해야한다.
+
+```cpp
+#include <iostream>
+#include <memory>
+#include "car.h"
+
+using namespace std;
+
+int main() {
+	// 아래와 같이 생성하고 초기화 하지말자.
+	Car* p = new Car;
+	shared_ptr<Car> sp1(p);
+
+	// 아래와 같이 생성하면서 초기화 하자!
+	shared_ptr<Car> sp2(new Car);
+
+	// 더 나은 방향으로는 make_shared 사용하자
+	shared_ptr<Car> sp3 = make_shared<Car>();
+}
+```
+
+위의 코드와 같이 생성과 초기화를 나누지 말고, 생성하면서 초기화 하도록 하자.
+그리고 우리가 위에서 언급했던것과 같이, `make_shared`를 활용해 생성하도록 하자!!
+
+### Next
+위와 같이 raw pointer를 활용해서 초기화하게 될 경우 `undefined` 동작이 발생할수
+있기 때문에 조심해야된다. 위의 예시와 같이 쉽게 발견되면 충분히 고칠 수 있으나 *threading* 동작을 수행할 때 주의해야된다. 그
+부분은 [다음 포스팅]()을 통해 다뤄보도록 한다.
+
+### Reference
+![C++ 강의](https://www.ecourse.co.kr/)
