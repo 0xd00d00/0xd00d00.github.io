@@ -167,4 +167,4 @@ int main() {
 부분은 [다음 포스팅]()을 통해 다뤄보도록 한다.
 
 ### Reference
-![C++ 강의](https://www.ecourse.co.kr/)
+[C++ 강의](https://www.ecourse.co.kr/)
