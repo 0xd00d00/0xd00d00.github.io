@@ -164,7 +164,7 @@ int main() {
 ### Next
 위와 같이 raw pointer를 활용해서 초기화하게 될 경우 `undefined` 동작이 발생할수
 있기 때문에 조심해야된다. 위의 예시와 같이 쉽게 발견되면 충분히 고칠 수 있으나 *threading* 동작을 수행할 때 주의해야된다. 그
-부분은 [다음 포스팅]()을 통해 다뤄보도록 한다.
+부분은 [다음 포스팅](https://0xd00d00.github.io/2022/03/19/enable_shared_from_this.html)을 통해 다뤄보도록 한다.
 
 ### Reference
 [C++ 강의](https://www.ecourse.co.kr/)
