@@ -5,7 +5,7 @@ title: "[C++][Modern C++] shared_ptr 스마트포인터 (ii)"
 subtitle: "shared_ptr에서 발생할 수 있는 문제점 및 해결책에 대해 알아보자 🤓"
 date: 2022-03-10
 cover: /assets/img/default.png
-tags: C++ Modern C++
+tags: C++ Modern_C++
 sitemap :
  changefreq : daily
  priority : 1.0
