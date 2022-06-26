@@ -130,7 +130,7 @@ DOM tree를 구성하고 layout 작업을 온전히 담당한다. Webkit 내 주
 - webcore
 - javascript engine (v8)
 
-내용이 길어지는 것 같으니, 한 박자 쉬고 [다음포스팅]()을 통해 나머지 내용들을
+내용이 길어지는 것 같으니, 한 박자 쉬고 [다음포스팅](https://0xd00d00.github.io/2022/06/26/chromium_blog_2.html)을 통해 나머지 내용들을
 확인해보도록 하자🎶
 
 ### Reference

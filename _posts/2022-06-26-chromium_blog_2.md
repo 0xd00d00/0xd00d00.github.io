@@ -24,7 +24,7 @@ sitemap :
 옮긴 것이 아닌 개인이 가진 지식과 흐름을 넣었기 때문에 조금 불편(?) 할수도 있다.
 따라서, 원본을 읽기를 원하는 사람은 [여기](https://medium.com/@zicodeng/explore-the-magic-behind-google-chrome-c3563dbd2739) 클릭해서 읽기 바란다.
 
-현재 posting은 [Google chome 뒤에선 어떤 동작이 일어나는가? (i)](https://nerdooit.github.io/2020/06/07/chromium_multi_blog_1.html) 포스팅의 후속편으로 앞선 포스팅을 읽고 읽는다면 이해가 더 쉬울 것이다.
+현재 posting은 [Google chome 뒤에선 어떤 동작이 일어나는가? (i)](https://0xd00d00.github.io/2022/06/26/chromium_blog_1.html) 포스팅의 후속편으로 앞선 포스팅을 읽고 읽는다면 이해가 더 쉬울 것이다.
 
 ### Zico Deng blog의 Browser, Renderer의 전체적인 구조 그림
 ![chromium overview](/assets/img/chromium_overview.png)
