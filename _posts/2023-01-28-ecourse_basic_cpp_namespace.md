@@ -5,13 +5,13 @@ title: "[C++ Basic] C++ namespace"
 subtitle: "C++ 에서 사용중인 namespace에 대해 알아보자 🙃"
 date: 2023-01-28
 cover: /assets/img/default.png
-tags: C++ C++\_Basic
+tags: C++ Cpp_Basic
 sitemap :
  changefreq : daily
  priority : 1.0
 ---
 
-안녕하세요! 두두코딩 <span class="doodoo">널두🥸 </span> 입니다 ✋ <br>
+안녕하세요! 두두코딩 <span class="doodoo">널두 🥸</span> 입니다 ✋ <br>
 오늘은 C++ namespace에 대해 알아보겠습니다.
 
 🖇 소스코드에 마우스를 올리고 <span class="tip">copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다!

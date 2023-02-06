@@ -16,7 +16,7 @@ EXTENTION='.md'
 NEWFILE=$TODAY"-"$1$EXTENTION
 
 echo "for loop"
-for filename in $(ls -l | awk '{ print $9 }'); do
+for filename in $(ls -l | awk '{ print $11 }'); do
   if [ ${filename} -ef ${NEWFILE} ]; then
       echo "this is same file! so, we close this script to prevent removing this content!"
       exit
@@ -37,12 +37,14 @@ echo "sitemap :" >> $NEWFILE
 echo " changefreq : daily" >> $NEWFILE
 echo " priority : 1.0" >> $NEWFILE
 echo "---" >> $NEWFILE
-echo '안녕하세요! <span class="doodoo">두두코딩</span> 입니다 ✋ <br>' >>$NEWFILE
+echo '안녕하세요! 두두코딩 <span class="doodoo">널두 🥸</span> 입니다 ✋ <br>' >>$NEWFILE
 echo "오늘은 OOO 개념에 대해 알아보겠습니다." >> $NEWFILE
 echo >> $NEWFILE
-echo '🖇 소스코드에 마우스를 올리고 <span class="tip">copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다! ' >> $NEWFILE
+echo '🖇 소스코드에 마우스를 올리고 <span class="tip">copy</span> 버튼을 누를 경우 더 쉽게 복사할 수 있습니다!' >> $NEWFILE
 echo >> $NEWFILE
 echo "궁금한 점, 보안점 남겨주시면 성실히 답변하겠습니다. 😁 <br>" >> $NEWFILE
 echo "\+ 감상평 댓글로 남겨주시면 힘이됩니다. 🙇" >> $NEWFILE
+echo "### Intro." >> $NEWFILE
+echo "### Outtro." >> $NEWFILE
 
 echo "check your md file if you write title, subtitle and tags!!!! "
