@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-좀 더 자세한 내용을 확인하기 위해서는 [여기](https://en.cppreference.com/w/cpp/header/string)참고해보자.
+좀 더 자세한 내용을 확인하기 위해서는 [여기](https://en.cppreference.com/w/cpp/header/string) 참고해보자.
 
 ### structured binding
 C++17에 추가된 문법으로 *구조체 혹은 배열의 각 멤버*를 꺼낼 때 사용하는
