@@ -21,7 +21,7 @@ sitemap :
 오늘 포스팅에서는 *C++ template 기본적 문법*에 대해 알아보겠습니다.
 
 ### template 기본 문법
-우리는 [이전 포스팅]() 을 통해 function overloading에 대해 알아보았다.
+우리는 [이전 포스팅](https://0xd00d00.github.io/2023/02/12/ecourse_basic_7_function_1.html) 을 통해 function overloading에 대해 알아보았다.
 
 ```cpp
 int square(int a)
