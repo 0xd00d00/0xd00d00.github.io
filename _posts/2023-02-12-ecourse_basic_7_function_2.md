@@ -196,4 +196,3 @@ teamplate 같은 경우 배울 부분이 많기 때문에 추후 포스팅에서
 해당 포스팅은 Ecourse의 C++ Basic 강의를 참고해 작성되었습니다.
 
 강의를 참고하실 분은 [여기](https://www.ecourse.co.kr/course/cppbasic_v2/)를 클릭해 확인해주세요!
-
