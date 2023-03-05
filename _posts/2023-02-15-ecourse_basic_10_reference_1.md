@@ -5,7 +5,7 @@ title: "[C++ Basic] C++ reference"
 subtitle: "Call by Reference 개념을 알아보자"
 date: 2023-02-15
 cover: /assets/img/default.png
-tags: haha
+tags: C++ Cpp_Basic
 sitemap :
  changefreq : daily
  priority : 1.0
@@ -33,7 +33,7 @@ int main()
 
 아래의 그림과 같이 `n` 같은 경우 메모리를 하나 잡고, 값을 10으로 넣는다. `p` 같은 경우 `n`의 주소값을 넣어두고, `p`의 값으로 `n`의 메모리에 저장된 값을 읽고 쓰고 한다. 우리는 이를 pointer라고 부른다.
 
-![call by pointer](/assets/img/cpp_prime/10_reference/callby1.png){: height="300px" width="800px"}
+![call by pointer](/assets/img/cpp_prime/10_reference/callby1.png){: height="250px" width="700px"}
 
 C++ 에서는 위와 같이 메모리를 할당하고, 접근하는 방식 중 하나가 더 추가 됐다. 바로 *Reference* 라는 개념이다.
 
@@ -43,7 +43,7 @@ int& r = n;
 
 `r`은 `n`의 할당된 메모리에 *또다른 이름*을 부여하는 것이다. 즉, 그림과 같이 `r`을 활용해 `n`의 값에 직접적으로 접근이 가능하도록 한다.
 
-![call by refernce](/assets/img/cpp_prime/10_reference/callby2.png){: height="300px" width="800px"}
+![call by refernce](/assets/img/cpp_prime/10_reference/callby2.png){: height="250px" width="700px"}
 
 `r`이 `n`의 또다른 이름이라고??? 의심하는 사람을 위해 아래의 코드와 같이 직접 주소값을 `std::cout`을 통해 출력해보자.
 
@@ -111,7 +111,7 @@ int main() {
 
 위의 코드를 통해 어떤 변화가 일어나는지 아래의 그림을 참고해보자.
 
-![call by~](/assets/img/cpp_prime/10_reference/callby3.png){: height="400px" width="800px"}
+![call by~](/assets/img/cpp_prime/10_reference/callby3.png){: height="330px" width="700px"}
 
 *🌱 a의 값은 변하지 않는다.*
 
