@@ -1,0 +1,119 @@
+---
+title: Archive
+layout: default
+---
+
+{% include header.html %}
+
+<div class="g-banner tags-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
+    <h2>Archive</h2>
+</div>
+
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+<h2>최근 변경된 문서(수정중)</h2>
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
+<ul class="wiki-index">
+  {% for wiki in documents limit: 5 %} 
+    <li style="display:list-item">
+      <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
+    <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
+    </li>
+  {% endfor %}
+  <a href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
+
+</ul>
+<!--
+<ul class="wiki-index">
+  {% for wiki in documents limit: 5 %} 
+    <li style="display:list-item">
+      <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
+      <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
+    </li>
+  {% endfor %}
+  
+  <li id="hidden-items" style="display:none;">
+    {% for wiki in documents offset: 5 %} 
+      <li style="display:list-item">
+        <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
+        <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
+      </li>
+    {% endfor %}
+  </li>
+  <button onclick="showDocuments()">전체문서 보기 {{ documents.size }} 개</button>
+</ul>
+-->
+<!--
+<ul class="archive">
+  {% for post in site.posts %}
+      {% assign year = post.date | date: '%Y-%m' %}
+      {% assign nyear = post.next.date | date: '%Y-%m' %}
+      {% assign year1 = post.date | date: '%Y' %}
+      {% assign nyear1 = post.next.date | date: '%Y' %}
+      {% if year1 != nyear1 %}
+        <h1>{{ post.date | date: '%Y' }}</h1>
+        <hr style="height: 2px; background-color: #464545; border:#464545;">
+      {% endif %}
+      {% if year != nyear %}
+          {% assign counter = 0 %}
+          {% assign speed = 0 %}
+          {% for post in site.posts %}
+             {% assign currentYear = post.date | date: '%Y-%m' %}
+             {% if year == currentYear %}
+                {% assign counter = counter | plus: 1 %}
+                {% assign speed = 1 %}
+             {% elsif speed == 1 %}
+                {% break %}
+             {% endif %}
+          {% endfor %}
+          <h2>{{ post.date | date: '%Y-%m' }}<span class="span_counter">{{ counter }}</span></h2>
+      {% endif %}
+
+    <li>
+      {% if post.link %}
+      <a href="{{ post.link }}">
+      {% else %}
+      <a href="{{ site.baseurl }}{{ post.url }}">
+      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+      {% endif %}
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+-->
+{% include footer.html %}
+<script>
+   function displayCheck()
+   {
+       if ($(window).width() < 695) {
+		   $('time').css('display','none');
+       } else {
+		   $('time').css('display','block');
+       }
+
+   }
+
+   $(document).ready(function ($) {
+     $(window).on('resize',displayCheck);
+   });
+
+   window.addEventListener('DOMContentLoaded', displayCheck);
+
+  // JavaScript 코드
+function showDocuments() {
+  var hiddenItems = document.getElementById("hidden-items");
+  if (hiddenItems.style.display === "none") {
+    hiddenItems.style.display = "block";
+    this.textContent = "전체문서 숨기기";
+  } else {
+    hiddenItems.style.display = "none";
+    this.textContent = "전체문서 보기 {{ documents.size }} 개";
+  }
+}
+
+</script>
+
+{% include createLink.html %}

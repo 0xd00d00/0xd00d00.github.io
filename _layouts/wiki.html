@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+{% include post-head.html %}
+
+<body>
+ <!-- This is the bar which shows scroll percentage -->
+  <div class="progress-bar"></div>
+  <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
+
+  <header
+    class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}"
+    data-theme="{{ site.theme-color }}"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        {% if page.tags.size > 0 %}
+          {% for tag in page.tags  %}
+            <a href="{{ "/tags.html#" | append: tag | relative_url }}" class="post-tag"><i class="fas fa-tags"></i> {{ tag }}</a>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>
+        <!-- created time, updated time 2개 넣어야함.-->
+        <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="far fa-calendar-alt"></i> {{ page.date | date_to_string }}</time>
+				<span class="post-meta-item">
+				<i class="fas fa-hourglass-half"></i>
+					{% include read_time.html%}
+				</span>
+      </div>
+    </div>
+    {% if page.cover %}
+    <div class="filter"></div>
+		<!--{{ page.cover | relative_url }}-->
+      <div class="post-cover" style="background: url('/assets/img/cover_page.png') center no-repeat; background-size: cover;"></div>
+    {% endif %}
+  </header>
+
+  <div class="post-content visible">
+    {% if page.subtitle %}
+    <h2 class="post-subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+
+    <!-- toc -->
+	<div class="col-md-2 col-lg-2"></div>
+    <article class="markdown-body col-md-6 col-lg-6">
+      {{ page.content }}
+    </article>
+
+    {% if site.social-share %}
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    {% endif %}
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="{{ site.avatar | relative_url }}" alt="">
+      </div>
+      <div class="author-name" rel="author">{{ site.author }}</div>
+      <div class="bio">
+        <p>{{ site.bio }}</p>
+      </div>
+      {% if site.sns.size > 0 %}
+      <ul class="sns-links">
+        {% for s in site.sns %}
+        <li>
+          <a href="{{ s[1] }}" target="_blank">
+                    <i class="iconfont icon-{{ s[0] }}"></i>
+                </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+  <!-- 연계된 게 아니라 필요 없음. pre / next *상위 문서 이동/ 하위 문서 이동 변경* -->
+		<script src="https://utteranc.es/client.js"
+        repo="0xd00d00/blog-comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+		</script>
+    {% if site.comments.disqus %}
+    <section class="post-footer-item comment">
+        <div id="disqus_thread"></div>
+    </section>
+    {% endif %}
+  </section>
+
+  {% include footer.html %}
+
+  <!-- TOC -->
+  <div id="div-toc" class="col-md-3 col-lg-3 side-toc post-container">
+	<h5 class="toc-head hvr-underline-from-center">
+		<a>Table of Content</a>
+	</h5>
+	<ui class="toc-body"></ui>
+  </div>
+  <script src="{{ "/assets/js/social-share.min.js" | relative_url }}"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        {% for i in site.social-share-items %}
+          '{{ i }}'
+          {% if forloop.last == false %},
+          {% endif %}
+        {% endfor %}
+      ],
+    });
+  </script>
+
+  <!-- source code -->
+  <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
+  <!-- jquery -->
+  <script src="{{ "/assets/js/index.min.js" | relative_url }}"></script>
+
+  <!-- percentage! -->
+  <script>
+     var element = document.documentElement,
+      body = document.body,
+      scrollTop = 'scrollTop',
+      scrollHeight = 'scrollHeight',
+      progress = document.querySelector('.progress-bar'),
+      scroll;
+
+    document.addEventListener('scroll', function() {
+      scroll = (element[scrollTop]||body[scrollTop]) / ((element[scrollHeight]||body[scrollHeight]) - element.clientHeight) * 100;
+      progress.style.setProperty('--scroll', scroll + '%');
+
+	  if (document.getElementsByTagName('Header')[0].classList[2] === "headerDown" && window.innerWidth > 695) {
+        progress.style.top = '57px';
+      } else {
+        progress.style.top = '0px';
+      }
+    });
+  </script>
+
+  <!-- TOC -->
+  <script>
+  	function generateTOC(selector) {
+		let _containerSelector = 'article.markdown-body';
+	 	let _h_tags = $(_containerSelector).find('h1,h2,h3,h4,h5,h6'), n, i, t, c, l;
+
+		$(selector).html('');
+
+		_h_tags.each(function() {
+			n = $(this).prop('tagName').toLowerCase();
+			i = "#" + $(this).prop('id');
+		    t = $(this).text();
+			c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+			l = $('<li class="' + n + '_nav"></li>').append(c);
+			$(selector).append(l);
+		});
+	}
+
+	jQuery(document).ready(function ($) {
+		const TOC_Criteria = 1370;
+		$TOC = $('.side-toc');
+		generateTOC('.toc-body');
+	  	$(window).on("resize load",function(e) {
+		  if ($(window).width() < 695) {
+			if ($('.headerDown')) {
+				$('.g-header').removeClass('.headerDown');
+			}
+		  }
+		  $mkbody = $('.markdown-body');
+		  if ($(window).width() > TOC_Criteria) {
+			$TOC.css('display','block');
+			$mkbody.removeClass("col-md-8 col-lg-8");
+			if (!$mkbody.hasClass("col-md-6"))
+				$mkbody.addClass("col-md-6 col-lg-6");
+		  } else {
+			$TOC.css('display','none');
+			$mkbody.removeClass("col-md-6 col-lg-6");
+			$mkbody.addClass("col-md-8 col-lg-8");
+		  }
+		});
+
+		$(window).on("scroll", function() {
+			 let currentTop = $(window).scrollTop();
+			 let bannerHeight = $('.g-banner').height();
+		     let subTitleHeight = $('.post-subtitle').height();
+			 let scrollHeight = bannerHeight + subTitleHeight;
+
+			 if (currentTop > scrollHeight && $(window).width() > TOC_Criteria) {
+				$TOC.addClass('fixed');
+			 } else {
+				$TOC.removeClass('fixed');
+			 }
+		});
+
+		$('.toc-body').onePageNav({
+			currentClass: "active",
+			changeHash: false,
+			easing: "swing",
+			filter: '',
+			scrollSpeed: 800,
+			scrollOffset: 0,
+			scrollThreadhold: 0.5,
+			begin: null,
+			end: null,
+			scrollChange: false,
+			padding: 50
+		});
+
+    	$('.markdown-body a').attr('target', '_blank');
+
+		$('.toc-head a').click(function(){
+			if ($(window).scrollTop() != 0)
+				$('html, body').animate({scrollTop: 0}, 1000);
+			else
+				$('html, body').animate({scrollTop: document.body.scrollHeight}, 1000);
+		});
+	});
+  </script>
+
+<style>
+.mardown-body h2::before !important{
+  content : "♯"
+}
+.mardown-body h2 !important{
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    color: #3a3a3a;
+    font-family: Window-Maple-Bold;
+    padding-top: 5px;
+}
+</style>
+{% include createLink.html %}
+
+</body>
+
+</html>
