@@ -16,6 +16,24 @@ src:url(../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf)}
 @font-face{
 	font-family:NotoSans-Bold;
 src:url(../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf)}
+@font-face{
+	font-family:Window-Maple-Bold;
+src:url(../fonts/Maplestory/window/Maplestory_Bold.ttf)}
+@font-face{
+	font-family:Window-Maple-Light;
+src:url(../fonts/Maplestory/window/Maplestory_Light.ttf)}
+@font-face{
+	font-family:Mac-Maple-Bold;
+src:url(../fonts/Maplestory/mac/Maplestory_OTF_Bold.otf)}
+@font-face{
+	font-family:Mac-Maple-Light;
+src:url(../fonts/Maplestory/mac/Maplestory_OTF_Light.otf)}
+@font-face{
+	font-family:Samlip-basic;
+src:url(../fonts/samlip/SDSamliphopangcheTTFBasic.ttf)}
+@font-face{
+	font-family:Samlip-outline;
+src:url(../fonts/samlip/SDSamliphopangcheTTFOutline.ttf)}
 body,html{
 height:100%}
 audio,body,caption,div,footer,form,h1,h2,h3,h4,h5,h6,header,html,iframe,label,legend,li,main,mark,menu,nav,ol,p,section,span,summary,table,textarea,time,ul,video{
@@ -679,11 +697,71 @@ z-index:0}
 .tags-banner{
 	height:300px;
 text-align:center}
+/* .tags-banner h2{
+ *   font-size:40px;
+ *   line-height:300px;
+ *   font-family: NotoSans-Bold !important;
+ * } */
+
 .tags-banner h2{
 	font-size:40px;
-	line-height:300px;
-	font-family: NotoSans-Bold !important;
+  font-weight: 700;
+  line-height:40px;
+  letter-spacing: 2px;
+  padding-top:125px;
+
+	font-family: Window-Maple-Bold !important;
 }
+
+/* tag banner tag add */
+.tags-banner h3 {
+	font-size:23px;
+  margin-top:7px;
+  font-weight : 500;
+  letter-spacing : 5px;
+	
+  font-family: Window-Maple-Light !important;
+}
+
+/* wiki css start */
+
+.wiki-index {
+  width : 55%;
+  margin: -100px auto 0;
+  padding: 150px 0;
+}
+
+.wiki-index li {
+   padding:0 20px 5px;
+   margin-bottom:7px;
+   font-size:17px;
+   font-family: 'NotoSansKR-Regular';
+}
+
+.wiki-index time {
+   float: right;
+}
+/* wiki css start */
+
+.wiki-index {
+  width : 55%;
+  margin: -100px auto 0;
+  padding: 150px 0;
+}
+
+.wiki-index li {
+   padding:0 20px 5px;
+   margin-bottom:7px;
+   font-size:17px;
+   font-family: 'NotoSansKR-Regular';
+}
+
+.wiki-index time {
+   float: right;
+}
+
+/* end of archive  */
+
 .tags-content{
 	width:695px;
 margin:-100px auto 0}
@@ -1260,6 +1338,7 @@ color:#61bdcf}
   color: #2d2b2b !important;
 }
 
+/* archive css start */
 .archive {
    width: 50%;
    margin: -100px auto 0;
@@ -1314,6 +1393,7 @@ color:#61bdcf}
    color: #ff9900;
    content: '➜  ';
 }
+/* archive css end */
 
 .span_counter {
    margin-left : 7px;

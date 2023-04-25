@@ -9,6 +9,7 @@ baseurl: ''
 # Navigation links
 nav:
   home: '/'
+  wiki: '/wiki/root-index'
   tags: '/tags.html'
   archive: '/archive.html'
 
@@ -36,7 +37,6 @@ comments:
   disqus: false
   disqus_url: 'https://liaokeyu.disqus.com/embed.js'
 
-# MathJax 公式支持 by Ray-Eldath
 mathjax: true
 
 # Share
@@ -75,6 +75,12 @@ RSS: false
 
 # codepen user name
 codepen_username: 0xd00d00
+
+# permalink 할 때, collections 가 아니라 colelction임.
+collections:
+  wiki:
+    output: true
+    permalink: /:collection/:path/
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35

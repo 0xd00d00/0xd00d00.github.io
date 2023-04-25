@@ -1,10 +1,35 @@
 ---
-title: Archive
+title: Wiki
 layout: default
 ---
 
 {% include header.html %}
+<div class="g-banner tags-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
+    <div>
+      <h2>개인 위키 페이지</h2>
+      <!-- tagbar h3 꾸미기 -->
+      <h3>좋은 Output을 위한 Input 모음</h3>
+    </div>
+</div>
 
+{% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+{% endif %}
+
+<main class=wiki-content>
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
+<ul class="wiki-content-list">
+  <h2>최근 변경된 문서(수정중)</h2>
+  {% for wiki in documents limit: 5 %} 
+    <li style="display:list-item">
+      <a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a>
+    </li>
+  {% endfor %}
+  <a href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
+
+</ul>
+</main>
+<!--
 <div class="g-banner tags-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
     <h2>Archive</h2>
 </div>
@@ -25,6 +50,7 @@ layout: default
   <a href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
 
 </ul>
+-->
 <!--
 <ul class="wiki-index">
   {% for wiki in documents limit: 5 %} 

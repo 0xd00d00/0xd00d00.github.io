@@ -289,7 +289,6 @@
 }
 
 .markdown-body h1,
-.markdown-body h2,
 .markdown-body h3,
 .markdown-body h5,
 .markdown-body h6 {
@@ -315,8 +314,16 @@
 
 .markdown-body h2 {
   margin-top: 28px;
+	margin-bottom: 1rem;
+  line-height: 1.25;
   font-size: 24px;
   font-weight: 600;
+  color: #3a3a3a;
+    font-family: Window-Maple-Bold;
+    padding-top: 5px;
+}
+.markdown-body h2:before {
+  content: "# ";
 }
 
 .markdown-body h3 {
@@ -694,4 +701,11 @@ li p:nth-child(2) {
 .markdown-body a[id=mk_toggle]:link,
 .markdown-body a[id=mk_toggle]:hover{
 	color: black;
+}
+
+.markdown-body a[id=wiki]{
+	box-shadow: none;
+  color : #3165ce;
+	font-family: 'NotoSans-Bold';
+	text-decoration: underline !important;
 }

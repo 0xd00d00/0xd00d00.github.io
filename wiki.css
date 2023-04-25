@@ -1,0 +1,49 @@
+
+/* 넓이는 695 고정 */
+/* margin을 통해 높낮이 조정 */
+
+.wiki-content {
+  width:795px;
+  margin: -80px auto 0;
+}
+
+.wiki-content-list {
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #e7eaf1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,37,55,.06);
+}
+/* unide code 참고사이트 : https://codepoints.net/search?q=link&na= */
+/* font awesome은 그냥 적용해둠 all min css 참고  */
+.wiki-content-list li:before {
+  /* content: "" */
+
+}
+.wiki-content-list li{
+    font-size : 19px;
+    padding: 8px 5px;
+}
+
+.wiki-content-list li a {
+   display:underline;
+   color: #;
+
+}
+
+.wiki-content-list li a:hover{
+   padding: 8px;
+   color: #d00d00;
+   text-shadow: -.25px -.25px 0 #d00d00,
+                 .25px .25px #d00d00;
+   border-radius: 6px;
+   background-color: #eaeaea;
+}
+
+@media screen and (max-width:795px){
+  /* wiki content 695보다 작으면.. */
+  .wiki-content {
+    width: 100%
+  }
+}
