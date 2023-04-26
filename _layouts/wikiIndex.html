@@ -4,7 +4,7 @@ layout: default
 ---
 
 {% include header.html %}
-<div class="g-banner tags-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
+<div class="g-banner wiki-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
     <div>
       <h2>개인 위키 페이지</h2>
       <!-- tagbar h3 꾸미기 -->
@@ -16,11 +16,25 @@ layout: default
   <h2>No post found</h2>
 {% endif %}
 
+
+
 <main class=wiki-content>
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
 <ul class="wiki-content-list">
+  <div class="wiki-hr-container">
+    <hr class="wiki-hr">
+    <span class="wiki-tree-span">개인 성장을 위한 <span class="blue">지식의 나무</span></span><br>
+    <span class="blue" style="font-family:Window-Maple-Light;">널두위키</span>에 오신걸 환영합니다!<br>
+    <span class="wiki-text-underline">부정확한 부분</span>은 과감히 댓글 남겨주세요!<br>
+    <hr class="wiki-hr">
+    <label class="wiki-label" for="search-input"># 위키트리</label>
+    <label class="wiki-label" for="search-input"># 위키검색</label>
+    <label class="wiki-label" for="search-input"># 랜덤위키</label>
+  </div>
+
+
   <h2>최근 변경된 문서(수정중)</h2>
-  {% for wiki in documents limit: 5 %} 
+  {% for wiki in documents %} 
     <li style="display:list-item">
       <a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a>
     </li>
@@ -121,10 +135,6 @@ layout: default
        }
 
    }
-
-   $(document).ready(function ($) {
-     $(window).on('resize',displayCheck);
-   });
 
    window.addEventListener('DOMContentLoaded', displayCheck);
 

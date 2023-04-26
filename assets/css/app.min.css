@@ -697,31 +697,31 @@ z-index:0}
 .tags-banner{
 	height:300px;
 text-align:center}
-/* .tags-banner h2{
- *   font-size:40px;
- *   line-height:300px;
- *   font-family: NotoSans-Bold !important;
- * } */
-
 .tags-banner h2{
-	font-size:40px;
-  font-weight: 700;
-  line-height:40px;
-  letter-spacing: 2px;
-  padding-top:125px;
-
-	font-family: Window-Maple-Bold !important;
+  font-size:40px;
+  line-height:300px;
+  font-family: NotoSans-Bold !important;
 }
 
-/* tag banner tag add */
-.tags-banner h3 {
-	font-size:23px;
-  margin-top:7px;
-  font-weight : 500;
-  letter-spacing : 5px;
-	
-  font-family: Window-Maple-Light !important;
-}
+/* .tags-banner h2{ */
+/*   font-size:40px; */
+/*   font-weight: 700; */
+/*   line-height:40px; */
+/*   letter-spacing: 2px; */
+/*   padding-top:125px; */
+/*  */
+/*   font-family: Window-Maple-Bold !important; */
+/* } */
+/*  */
+/* [> tag banner tag add <] */
+/* .tags-banner h3 { */
+/*   font-size:23px; */
+/*   margin-top:7px; */
+/*   font-weight : 500; */
+/*   letter-spacing : 5px; */
+/*    */
+/*   font-family: Window-Maple-Light !important; */
+/* } */
 
 /* wiki css start */
 

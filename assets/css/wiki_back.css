@@ -1,0 +1,247 @@
+
+/* 일단 오늘 봐야할 것
+ *
+ * - wikiIndex color수정
+ * - app.min.css tag 크기 살리기
+ * - 밑의 코드 수정 */
+
+
+/* 넓이는 695 고정 */
+/* margin을 통해 높낮이 조정 */
+
+.wiki-banner {
+  height:300px;
+  text-align: center;
+}
+.wiki-banner h2{
+  font-size:38px;
+  font-weight: 700;
+  line-height:40px;
+  letter-spacing: 2px;
+  padding-top:90px;
+
+  font-family: Window-Maple-Bold !important;
+}
+
+/* tag banner tag add */
+.wiki-banner h3 {
+  font-size:20px;
+  margin-top:5px;
+  font-weight : 500;
+  letter-spacing : 5px;
+
+  font-family: Window-Maple-Light !important;
+}
+
+.wiki-content {
+	width:1020px;
+  display:block;
+  margin: -80px auto 0;
+}
+
+.wiki-content-list {
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #e7eaf1;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,37,55,.06);
+}
+/* unide code 참고사이트 : https://codepoints.net/search?q=link&na= */
+/* font awesome은 그냥 적용해둠 all min css 참고  */
+.wiki-content-list li:before {
+  /* content: "•";
+   * color: #3e3e3e; */
+}
+
+.wiki-content-list h2 {
+  margin-top: 28px;
+	margin-bottom: 1rem;
+  line-height: 1.15;
+  font-size: 26px;
+  font-weight: 600;
+  font-style: italic;
+  color: #3e3e3e;
+    font-family: Window-Maple-Bold;
+    padding-top: 5px;
+}
+
+.wiki-content-list h2:before {
+  content:"#"
+}
+
+.wiki-conent-item {
+   box-shadow: none;
+   color: #3165ce;
+   font-family: 'NotoSans-Bold';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wiki-content-item a{
+    font-size : 19px;
+    padding: 8px 5px;  
+}
+
+.wiki-content-item:hover {
+   padding: 8px;
+   /* color: #d00d00;
+    * text-shadow: -.25px -.25px 0 #d00d00,
+    *               .25px .25px #d00d00; */
+   border-radius: 6px;
+   background-color: #eaeaea;
+   text-decoration-line: underline;
+   text-decoration-thickness: 2px;
+
+   overflow: visible;
+   white-space: normal;
+}
+
+/* .wiki-content-list li:before */
+/* { */
+/*   font-family: 'Ionicons'; */
+/* } */
+/*  */
+/* .wiki-content-list li{ */
+/* } */
+/*  */
+/* .wiki-content-list li:hover { */
+/*    overflow: visible; */
+/*    white-space: normal; */
+/* } */
+/*  */
+/* .wiki-content-list li a { */
+/*    box-shadow: none; */
+/*    color: #3165ce; */
+/*    font-family: 'NotoSans-Bold'; */
+/*  */
+/*    [> text-decoration: underline !important; <] */
+/* } */
+/*  */
+/* .wiki-content-list li a:hover{ */
+/*    padding: 8px; */
+   /* color: #d00d00;
+    * text-shadow: -.25px -.25px 0 #d00d00,
+    *               .25px .25px #d00d00; */
+/*    border-radius: 6px; */
+/*    background-color: #eaeaea; */
+/*    text-decoration-line: underline; */
+/*    text-decoration-thickness: 2px; */
+/*  */
+/* } */
+
+@media screen and (max-width:1020px){
+  .wiki-content {
+    width : 100%;
+  }
+}
+
+@media screen and (max-width:695px){
+
+  .wiki-banner {
+    height : 230px;
+  }
+  .wiki-banner h2{
+    /* padding-top : 120px; */
+  }
+
+  /* wiki content 695보다 작으면.. */
+  .wiki-content {
+    margin-top:0;
+  }
+
+  .g-footer {
+    padding: 30px 0
+  }
+}
+
+/* 폰트 깨져서 추가함 */
+@media screen and (max-width:376px){
+  .wiki-banner h2{
+    font-size : 33px;
+  }
+  .wiki-banner h3{
+    font-size : 18px;
+  }
+}
+
+/* max 695 -> tags-banner :230 
+ *   height:230px}
+ *   .tags-list{
+ *   padding:0 0 24px}
+ *   .tags-banner h2 {
+ *     font-size: 33px;
+ *     line-height: 230px;
+ *   }
+ *   .g-footer{
+ *   padding:30px 0} */
+
+/* g-footer
+ * .g-footer{
+ *   min-height:40px;
+ *   padding:20px 0;
+ *   border-top:1px solid #e7eaf1;
+ * text-align:center}
+ * .g-footer section{
+ *   font-size:14px;
+ *   line-height:20px;
+ * color:#a6abb2}
+ * .g-footer section a{
+ * color:#a6abb2}
+ * .g-footer section a:hover{
+ * color:#83888f} */
+
+
+/* 일반적인 tag banner */
+/* .tags-banner{ */
+/*   height:300px; */
+/*  */
+/* text-align:center} */
+/* .tags-content{ */
+/*   width:695px; */
+/* margin:-100px auto 0} */
+/* .tags-list{ */
+/* padding:40px 0} */
+/* .tags-list li{ */
+/*   padding:30px 20px; */
+/*   background-color:#fff; */
+/*   border:1px solid #e7eaf1; */
+/*   border-radius:3px; */
+/*   box-sizing:border-box; */
+/*   box-shadow:0 1px 3px rgba(0,37,55,.06); */
+/* margin-bottom:12px} */
+/* .tags-list li:first-child{ */
+/*   margin-bottom:24px; */
+/* cursor:default} */
+/* .tags-list li .tag{ */
+/*   box-shadow:0 0 .3px #bfc2c6; */
+/* margin-bottom:12px} */
+/* .tags-list li .tag-name{ */
+/*   display:block; */
+/*   font-size:20px; */
+/*   color:#686b70; */
+/*   text-align:center; */
+/*   font-family: 'NotoSans-Bold'; */
+/* margin-bottom:20px} */
+/* .tags-list li .tag-post{ */
+/*   display:block; */
+/*   font-size:16px; */
+/*   color:#666; */
+/*   text-align: left; */
+/*   margin:16px auto; */
+/*   margin-left: 7%; */
+/*     margin-right: 7%; */
+/* } */
+/* .tags-list li .tag-post:hover{ */
+/*   text-shadow: -.25px -.25px 0 #537895, */
+/*                 .25px .25px #537895; */
+/* color:#537895; */
+/* } */
+/* .tags-list li .tag-post:hover::before{ */
+/*   text-shadow: -.25px -.25px 0 #537895, */
+/*                 .25px .25px #537895; */
+/* color:#537895; */
+/* content: '➜  '; */
+/* } */
+
