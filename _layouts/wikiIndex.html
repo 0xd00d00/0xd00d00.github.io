@@ -4,7 +4,7 @@ layout: default
 ---
 
 {% include header.html %}
-<div class="g-banner wiki-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
+<div class="g-banner wiki-banner " style="background :linear-gradient(#3c7fb3,#37485e);" data-theme="{{ site.theme-color }}">
     <div>
       <h2>개인 위키 페이지</h2>
       <!-- tagbar h3 꾸미기 -->
@@ -34,12 +34,12 @@ layout: default
 
 
   <h2>최근 변경된 문서(수정중)</h2>
-  {% for wiki in documents %} 
+  {% for wiki in documents limit:5 %} 
     <li style="display:list-item">
       <a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a>
     </li>
   {% endfor %}
-  <a href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
+  <a id="wiki-list-a" href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
 
 </ul>
 </main>
@@ -138,6 +138,25 @@ layout: default
 
    window.addEventListener('DOMContentLoaded', displayCheck);
 
+   
+//   이 코드 넣어서 테스트 해보면 됨 -> 이걸로 접기 가능해짐
+//   data-를 통해 넘길 수 있다는 것 기억할 것.
+//   wiki page를 꾸며보자
+   $("#wiki-list-a").click(function(event) {
+     event.preventDefault();
+     const arg1 = $(this).data('arg1');
+     const listContainer = $(this).parent();
+     if ($("#new_list").length) {
+       alert('(test) 우선 리스트 목록 접습니다~');
+       listContainer.find('li').slice(5).remove();
+     } else {
+       alert('(test) 나머지 리스트 목록 보여드릴게요~');
+       {% for wiki in documents offset:5 %}
+          $(this).before('<li id="new_list"><a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a></li>');
+       {% endfor %} 
+     }
+   })
+  
   // JavaScript 코드
 function showDocuments() {
   var hiddenItems = document.getElementById("hidden-items");
@@ -152,4 +171,3 @@ function showDocuments() {
 
 </script>
 
-{% include createLink.html %}
