@@ -61,9 +61,9 @@
 
       <div class="wiki-post-content">
         {{page.content}}
+
       </div>
     </div> <!-- wiki-post -->
-
   <script src="https://utteranc.es/client.js"
       repo="0xd00d00/blog-comments"
       issue-term="pathname"
@@ -71,12 +71,11 @@
       crossorigin="anonymous"
       async>
   </script>
-  </div>
-
- <footer/>
-
+  </div> <!-- wiki-container -->
 </body>
 
 {% include createLink.html %}
+<script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/index.min.js" | relative_url }}"></script>
 
 </html>
