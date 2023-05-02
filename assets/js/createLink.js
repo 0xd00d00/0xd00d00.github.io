@@ -3,7 +3,7 @@
 
   // post가 없으면 wiki-index를 찾도록 해
   if (post === null)
-    post = document.querySelector('ul.wiki-index');
+    post = document.querySelector('div.wiki-post-content');
 
   console.log('test. tag ' + post.tagName)
 

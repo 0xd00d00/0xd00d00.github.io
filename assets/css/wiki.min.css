@@ -1,0 +1,279 @@
+body{
+	font-family:NotoSans-Regular,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	color:#373a3c !important;
+	-webkit-font-smoothing:antialiased;
+  background-color:#f7f8fa;
+  font-size:17px;
+  counter-reset: h2counter, h3counter, h4counter,h5counter;
+}
+
+body, th, td, div, p, li {
+    word-break: keep-all;
+}
+
+.wiki-container{
+  width:860px;
+  margin:auto;
+  height : 100%;
+  border-left: 1px solid #ccc !important;
+  border-right: 1px solid #ccc !important; 
+}
+
+.wiki-header{
+	width:100%;
+	height:45px;
+	transition:all .6s;
+  z-index:1000
+}
+
+
+.g-header .g-logo{
+	float:left;
+	margin-left:2%;
+	width:60px;
+	height:26px;
+	background:url(../icons/logo.svg) no-repeat center;
+	background-size:100% 100%;
+	opacity:.8;
+transition:all .2s}
+.g-header .g-logo:hover{
+opacity:1}
+.g-header .g-logo a{
+	display:block;
+	width:100%;
+height:100%}
+
+
+.g-header .icon-menu{
+	display:none;
+	position:absolute;
+	top:22px;
+	right:0;
+	padding:8px;
+	font-size:28px;
+	color:#fff;
+	opacity:.8;
+border-radius:3px}
+
+/* icon이 hidden으로 있음 */
+/* 아래는 회색으로 변경용 */
+.g-header .icon-menu:active{
+background-color:rgba(255,255,255,.2)}
+
+.wiki-nav{
+  max-width:860px;
+  margin : auto;
+  padding-top:15px;
+  display:block;
+}
+
+.wiki-nav>ul>li{
+	float:left;
+  top: 15px;
+	height:15px;
+	line-height:15px;
+	text-transform:uppercase;
+  margin-right:23px}
+
+.wiki-nav>ul>li:last-child{
+margin-right:0}
+
+.wiki-nav>ul>li>a{
+	display:inline-block;
+	font-size:15px;
+	letter-spacing:1px;
+	font-family:NotoSans-Bold;
+	color:#fff;
+	padding:0 12px;
+  opacity:.7
+}
+
+.g-header .g-nav>ul>li>a:hover{
+opacity:1}
+.g-header .nav-default a:hover{
+color:#1494fb!important}
+.g-header .nav-pink a:hover{
+color:#fc6794!important}
+.headerUp{
+top:-65px}
+.headerDown{
+top:0}
+
+
+.wiki-footer{
+	min-height:40px;
+	padding:auto;
+	border-top:1px solid #e7eaf1;
+text-align:center}
+
+.wiki-footer section{
+	font-size:14px;
+	line-height:20px;
+}
+
+
+/* post */
+.wiki-post {
+  padding : 20px;
+  display : block;
+}
+
+.wiki-page-title {
+  font-size: 2.2rem;
+  font-family: 'NotoSans-Bold';
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+.wiki-page-title a {
+  color: #373a3c;
+  text-decoration: none !important;
+}
+
+.wiki-page-title > a:hover{
+  color: #373a3c; 
+  text-decoration: none !important;
+}
+.history-time {
+    font-size: .85rem;
+    text-align: right;
+    margin-bottom: 10px;
+    font-family:'NotoSans-Regular'
+}
+
+.history-time > p{
+  margin-bottom : 0px;
+}
+
+.tag-box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: .9rem;
+    margin-bottom: 2.5em;
+    padding: 3px 3px 3px 5px;
+}
+
+.tag-box a{
+  color:#0275d8;
+  font-size:.9rem;
+}
+
+.tag-box span:after{
+  color:black;
+  content:':';
+}
+
+.wiki-page-info a {
+      background-color: #fff;
+    border: 0.0625rem solid #ccc;
+    color: #373a3c!important;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margine-top:5px;
+    padding: 0.3rem 0.8rem;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    float: right;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-left:-1px;
+}
+
+.wiki-post-content h2,
+.wiki-post-content h3,
+.wiki-post-content h4,
+.wiki-post-content h5 {
+  font-family:NotoSans-Bold !important;
+  line-height: 1.5 !important;
+}
+.wiki-post-content h2:before,
+.wiki-post-content h3:before,
+.wiki-post-content h4:before,
+.wiki-post-content h5:before{
+  color: #1f6aaa;
+}
+
+.wiki-post-content a {
+  font-family:NotoSans-Bold !important;
+  color:#3165ce;
+  text-decoration:underline;
+}
+
+.wiki-post-content h2 {
+  font-size: 1.8em !important;
+  border-bottom: 1px solid #d0d0d0;  
+  counter-increment: h2counter;
+}
+.wiki-post-content h3 {
+  font-size: 1.6em !important;
+  counter-increment: h3counter;
+  border-bottom: 1px solid #d0d0d0;  
+}
+.wiki-post-content h4 {
+  font-size: 1.4em !important;
+  counter-increment: h4counter;
+  border-bottom: 1px solid #d0d0d0;  
+}
+
+.wiki-post-content h5 {
+  font-size: 1.2em !important;
+  counter-increment: h5counter;
+  border-bottom: 1px solid #d0d0d0;  
+}
+
+.wiki-post-content h2:before {
+  content: counter(h2counter) ". ";
+}
+
+.wiki-post-content h3:before {
+  color: #1f6aaa;
+  content: counter(h2counter)"."counter(h3counter)". ";
+}
+.wiki-post-content h4:before {
+  color: #1f6aaa;
+  content: counter(h2counter)"."counter(h3counter)"."counter(h4counter)". ";
+}
+.wiki-post-content h5:before {
+  color: #1f6aaa;
+  content: counter(h2counter)"."counter(h3counter)"."counter(h4counter)"."counter(h5counter)". ";
+}
+
+.wiki-post-content ol {
+  display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.wiki-post-content ul {
+  display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.wiki-post-content li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.wiki-post-content ol ul {
+  list-style-type: circle;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+}
+.wiki-post-content a:visited {
+    color: #d00d00;
+}

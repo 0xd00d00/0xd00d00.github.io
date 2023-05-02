@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+{% include wiki-head.html %}
+
+<body>
+
+  <div class="progress-bar"></div>
+  <!-- 파란색으ㅗㄹ -->
+ 
+  <header class="wiki-header" style="background-color:#30638e;">
+    <nav class="wiki-nav">
+        <ul>
+            <li><a href="/wiki/root-index/">널두위키</a></li>
+            <li><a href="/tags.html">테그이동</a></li>
+            <li><a href="/archive.html">아카이브</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <div class="wiki-container">
+    <div class="wiki-post">
+      <header>
+        <div class="wiki-page-info">
+          <a><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> 
+          <a>
+          <i class="fas fa-hourglass-half"></i>
+            {% include read_time.html%}
+          </a>
+        </div>
+        <h1 class="wiki-page-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <div class="history-time">
+            <p><i class="far fa-calendar-alt"></i> 최초 생성 시각: {{ page.date | date: '%Y-%m-%d %H:%M:%S' }}</p>
+            <p><i class="far fa-calendar-alt"></i> 최근 수정 시각: {{ page.updated | date: '%Y-%m-%d %H:%M:%S' }}</p>
+        </div>
+        <div class="tag-box">
+          <span>분류</span>
+          <a href="#">test</a>
+        </div>
+      </header>
+
+  <!-- <header> -->
+  <!-- <div class="post-wrapperi"> -->
+  <!--   <div class="post-tags"> -->
+  <!--     {% if page.tags.size > 0 %} -->
+  <!--       {% for tag in page.tags  %} -->
+  <!--         <a href="{{ "/tags.html#" | append: tag | relative_url }}" class="post-tag"><i class="fas fa-tags"></i> {{ tag }}</a> -->
+  <!--       {% endfor %} -->
+  <!--     {% endif %} -->
+  <!--   </div> -->
+  <!--   <div class="post-meta"> -->
+  <!--     <span class="post-meta-item"><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span> -->
+  <!--     [> created time, updated time 2개 넣어야함.<] -->
+  <!--     <time class="post-meta-item" datetime="{{ page.date | date:"%y-%m-%d" }}"><i class="far fa-calendar-alt"></i> {{ page.date | date_to_string }}</time> -->
+  <!--     <span class="post-meta-item"> -->
+  <!--     <i class="fas fa-hourglass-half"></i> -->
+  <!--       {% include read_time.html%} -->
+  <!--     </span> -->
+  <!--   </div> -->
+  <!-- </div> -->
+  <!-- </header> -->
+
+      <div class="wiki-post-content">
+        {{page.content}}
+      </div>
+    </div> <!-- wiki-post -->
+
+  <script src="https://utteranc.es/client.js"
+      repo="0xd00d00/blog-comments"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+  </script>
+  </div>
+
+ <footer/>
+
+</body>
+
+{% include createLink.html %}
+
+</html>
