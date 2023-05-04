@@ -10,7 +10,7 @@
   <header class="wiki-header" style="background-color:#30638e;">
     <nav class="wiki-nav">
         <ul>
-            <li><a href="/wiki/root-index/">널두위키</a></li>
+            <li ><a href="/wiki/root-index/">널두위키</a></li>
             <li><a href="/tags.html">테그이동</a></li>
             <li><a href="/archive.html">아카이브</a></li>
         </ul>
@@ -78,4 +78,9 @@
 <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/index.min.js" | relative_url }}"></script>
 
+<script>
+$(document).ready(function() {
+  $('#markdown-toc').prepend('<li class="markdown-toc-title">Table Of Contents</li>');
+});
+</script>
 </html>

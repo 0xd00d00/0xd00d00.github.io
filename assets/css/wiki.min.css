@@ -3,7 +3,6 @@ body{
 	color:#373a3c !important;
 	-webkit-font-smoothing:antialiased;
   background-color:#f7f8fa;
-  font-size:17px;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
 }
 
@@ -13,6 +12,7 @@ body, th, td, div, p, li {
 
 .wiki-container{
   width:860px;
+  font-size:17px;
   border-left: 1px solid #ccc !important;
   border-right: 1px solid #ccc !important;
   margin:auto;
@@ -83,12 +83,14 @@ margin-right:0}
 	letter-spacing:1px;
 	font-family:NotoSans-Bold;
 	color:#fff;
-	padding:0 12px;
-  opacity:.7
+	padding:0 13px;
+  opacity:.7;
 }
 
-.g-header .g-nav>ul>li>a:hover{
-opacity:1}
+.wiki-nav>ul>li>a:hover{
+  opacity:1;
+}
+
 .g-header .nav-default a:hover{
 color:#1494fb!important}
 .g-header .nav-pink a:hover{
@@ -281,4 +283,72 @@ text-align:center}
 }
 .wiki-post-content a:visited {
     color: #d00d00;
+}
+
+
+/* 우선 가운데 정렬과 넓이 사이즈만 조정  */
+@media screen and (max-width : 865px) {
+  .wiki-container {
+    margin: 0 auto;
+    width: 100%;  
+    font-size: 16px;
+  }
+}
+
+/* CODE */
+.wiki-post-content ul code.language-plaintext,
+.wiki-post-content strong code.language-plaintext,
+.wiki-post-content span code.language-plaintext,
+.wiki-post-content ol code.language-plaintext,
+.wiki-post-content p code.language-plaintext {
+	padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 95%;
+  font-family:  "D2coding-Bold", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background-color: #ececec;
+  background: #ececec;
+  color: #054f8d;
+	border-radius: .3em;
+}
+
+.wiki-post-content code,
+.wiki-post-content kbd,
+.wiki-post-content pre {
+  font-family:  "D2coding-Regular", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+
+/* toc */
+@media (min-width: 1650px) {
+    ul#markdown-toc {
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: calc(50vw + 450px);
+        width: 380px;
+        background-color: white;
+        z-index: 1;
+        overflow-y:auto;
+        overflow-x:hidden;
+        border: 0px solid;
+        line-height: 1.5;
+    }
+}
+
+
+#markdown-toc {
+  	text-transform:uppercase;
+    border: 0.7px solid;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #FFFFFF;
+    font-size:0.8em;
+    line-height: 1.5;
+}
+
+.markdown-toc-title {
+  font-family: NotoSans-Bold;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding-bottom: 10px;
 }

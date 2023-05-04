@@ -4,18 +4,20 @@ author  : 널두
 title   : "해야할 일 (wiki)" 
 subtitle : 
 date    : 2023-04-26 21:18:08 +0900
-updated : 2023-05-03 00:36:19 +0900
+updated : 2023-05-04 10:33:33 +0900
 ---
+* ToC
+{:toc}
 
 ## test 페이지
 이제 약간의 wiki의 모습을 갖추게 되었다.
 
 ### 해야할 일
-1. ol > ul / ul > ol 사이즈맞추기
+~~1. ol > ul / ul > ol 사이즈맞추기~~<br>
+~~6. mobile / ipad 사이즈 조절~~
 2. ToC 구성
 3. 상위 디렉토리 가기
 5. 포스팅과 wiki 합치기
-6. mobile / ipad 사이즈 조절
 7. 검색기능 추가
 8. History 보여주기
 
