@@ -402,8 +402,7 @@ applause-button .count-container {
 
 /* comment  */
 .giscus {
-  width: 98%;
-  padding: 3px 3px 3px 9px;
+  width: 100%;
   min-height: 150px;
 }
 
