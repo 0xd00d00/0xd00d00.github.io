@@ -282,7 +282,7 @@ text-align:center}
   margin-block-end: 0px;
 }
 .wiki-post-content a:visited {
-    color: #d00d00;
+    color: #344B83;
 }
 
 
@@ -346,6 +346,21 @@ text-align:center}
     line-height: 1.5;
 }
 
+#markdown-toc li a:hover{
+  padding:4px;
+  color:#d00d00;
+  background-color:#ececec;
+  border-radius:4px;
+}
+
+.active-toc {
+  color: #d00d00;
+}
+
+.active-toc:visited {
+  color: #d00d00 !important;
+}
+
 
 /* toc header  */
 .markdown-toc-title {
@@ -356,9 +371,6 @@ text-align:center}
   padding-bottom: 10px;
 }
 
-.active-toc {
-  color: #d00d00;
-}
 
 .markdown-toc-title a {
   text-decoration: none;
@@ -374,4 +386,15 @@ text-align:center}
 
 .markdown-toc-title i {
   font-size : 0.9em;
+}
+
+/* applause button */
+applause-button {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+}
+applause-button .count-container {
+  font-family:NotoSans-Regular;
+  color: #30638e !important;
 }

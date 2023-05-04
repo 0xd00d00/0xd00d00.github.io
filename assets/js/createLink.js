@@ -5,24 +5,16 @@
   if (post === null)
     post = document.querySelector('div.wiki-post-content');
 
-  console.log('test. tag ' + post.tagName)
-
   // p, ul, h1~h6, table 중 link로 변환해야되는걸 변환하는 동작.
   // article 부터 순회하는거임.
   
   ;(function iterate_node(test) {
     if (/^(?:p|ul|h\d|table)$/i.test(test.tagName)) {
         const pattern = /\[\[/g;
-        console.log('tagName..?')
-        console.log(test.innerHTML)
         if (pattern.test(test.innerHTML)) {
-          console.log('test ok' + test.innerHTML)
           test.innerHTML = link(test.innerHTML);
-        } else {
-          console.log('test not ok');
         }
     } else {
-        console.log('tet. ' + test.childNodes.length)
         for (var i = 0; i < test.childNodes.length; i++) {
              iterate_node(test.childNodes[i]);
         }

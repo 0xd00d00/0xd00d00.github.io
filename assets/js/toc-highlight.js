@@ -16,7 +16,7 @@
     /**
      * 본문의 헤딩 엘리먼트 배열 캐시.
      */
-    const headings = document.querySelector(".post-content")
+    const headings = document.querySelector(".wiki-post-content")
         .querySelectorAll("h1, h2, h3, h4, h5, h6, h7, h8, h9");
 
     /**
@@ -45,7 +45,7 @@
     const findCurrentHeading = (headings) => {
         let currentHeading = headings[0];
         for (let i = 0; i < headings.length; i++) {
-            const y = headings[i].getBoundingClientRect().top - 35;
+            const y = headings[i].getBoundingClientRect().top - 50;
 
             if (y > 0) {
                 break;

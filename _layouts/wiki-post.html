@@ -60,6 +60,16 @@
 
       </div>
     </div> <!-- wiki-post -->
+
+    <div style="margin-top:20px; margin-bottom:10px">
+      <applause-button class="mb6"
+        color=rgb(48,99,142)
+        url={{ page.url }} >
+      </applause-button>
+      <p style="text-align:center; font-family:NotoSans-Bold; color:#30638e">공감하기</p>
+    </div>
+
+
   <script src="https://utteranc.es/client.js"
       repo="0xd00d00/blog-comments"
       issue-term="pathname"
@@ -78,6 +88,13 @@
 <script>
 $(document).ready(function() {
     $('#markdown-toc').prepend('<li class="markdown-toc-title"><i class="fa fa-folder-open"></i> <a href="#wiki-post-header">Table Of Contents</a></li>');
+
+    // 귀찮아서 @@ -> <br>로 변경하는걸 만듬
+    const paragraphs = document.getElementsByTagName('p');
+    for (let i = 0; i < paragraphs.length; i++) {
+      const text = paragraphs[i].innerHTML;
+      paragraphs[i].innerHTML = text.replace(/@@+/g, '<br>');
+    }
 });
 </script>
 </html>
