@@ -346,9 +346,32 @@ text-align:center}
     line-height: 1.5;
 }
 
+
+/* toc header  */
 .markdown-toc-title {
   font-family: NotoSans-Bold;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  margin-left: -18px;
   list-style-type: none;
   padding-bottom: 10px;
+}
+
+.active-toc {
+  color: #d00d00;
+}
+
+.markdown-toc-title a {
+  text-decoration: none;
+  color: #383a3c !important;
+}
+
+.markdown-toc-title a:hover,
+.markdown-toc-title a:visited {
+  /* 무효화할 스타일 */
+  text-decoration: none;
+  color: initial;
+}
+
+.markdown-toc-title i {
+  font-size : 0.9em;
 }

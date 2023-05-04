@@ -3,14 +3,10 @@
 {% include wiki-head.html %}
 
 <body>
-
-  <div class="progress-bar"></div>
-  <!-- 파란색으ㅗㄹ -->
- 
-  <header class="wiki-header" style="background-color:#30638e;">
+  <header id="wiki-post-header" class="wiki-header" style="background-color:#30638e;">
     <nav class="wiki-nav">
         <ul>
-            <li ><a href="/wiki/root-index/">널두위키</a></li>
+            <li ><a href="/wiki/root-index/">  널두위키</a></li>
             <li><a href="/tags.html">테그이동</a></li>
             <li><a href="/archive.html">아카이브</a></li>
         </ul>
@@ -77,10 +73,11 @@
 {% include createLink.html %}
 <script src="{{ "/assets/js/prism.js" | relative_url }}"></script>
 <script src="{{ "/assets/js/index.min.js" | relative_url }}"></script>
+<script async src="{{ "/assets/js/toc-highlight.js" | relative_url }}"></script>
 
 <script>
 $(document).ready(function() {
-  $('#markdown-toc').prepend('<li class="markdown-toc-title">Table Of Contents</li>');
+    $('#markdown-toc').prepend('<li class="markdown-toc-title"><i class="fa fa-folder-open"></i> <a href="#wiki-post-header">Table Of Contents</a></li>');
 });
 </script>
 </html>
