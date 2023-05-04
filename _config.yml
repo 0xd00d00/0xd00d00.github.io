@@ -86,5 +86,12 @@ collections:
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
 permalink: /:year/:month/:day/:title.html
 
+# 댓글 기능
+giscus:
+  repo: 0xd00d00/giscus-blog-comment
+  repo-id: R_kgDOJe0Zww
+  category: Comment
+  category-id: DIC_kwDOJe0Zw84CWQcl
+
 # Plugins
 plugins: [jekyll-paginate]
