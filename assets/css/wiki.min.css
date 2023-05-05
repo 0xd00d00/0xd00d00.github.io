@@ -288,7 +288,6 @@ text-align:center}
     color: #344B83;
 }
 
-
 /* 우선 가운데 정렬과 넓이 사이즈만 조정  */
 @media screen and (max-width : 865px) {
   .wiki-container {
@@ -343,10 +342,15 @@ text-align:center}
     }
 }
 
+@media screen and (max-width: 1650px) {
+    .tag-box {
+      margin-bottom: 1em !important; 
+    }
+}
 
 #markdown-toc {
-  	text-transform:uppercase;
-    border: 0.7px solid;
+    text-transform:uppercase;
+    border: 0.7px solid #9b9898;
     padding: 10px;
     padding-left: 30px;
     background-color: #FFFFFF;
