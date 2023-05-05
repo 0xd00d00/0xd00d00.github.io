@@ -19,8 +19,6 @@ body, th, td, div, p, li {
   border-left: 1px solid #ccc !important;
   border-right: 1px solid #ccc !important;
   margin:auto;
-  overflow-y: scroll; /* 수직 방향 스크롤링 */
-  -webkit-overflow-scrolling: touch; /* iOS에서 스크롤링 부드럽게 처리 */
 }
 
 .wiki-header{
@@ -28,6 +26,7 @@ body, th, td, div, p, li {
   height: 45px;
 	transition:all .6s;
   background-color:#30638e;
+  overflow:hidden;
   margin 0;
   z-index:1000
 }
