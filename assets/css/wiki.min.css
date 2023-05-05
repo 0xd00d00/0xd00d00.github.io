@@ -21,9 +21,8 @@ body, th, td, div, p, li {
 }
 
 .wiki-header{
-  position:fixed;
-	width:100%;
-	height:30px;
+  width: auto;
+  height: 45px;
 	transition:all .6s;
   background-color:#30638e;
   z-index:1000
