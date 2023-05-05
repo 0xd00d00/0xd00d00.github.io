@@ -25,6 +25,7 @@ body, th, td, div, p, li {
   height: 45px;
 	transition:all .6s;
   background-color:#30638e;
+  margin 0;
   z-index:1000
 }
 
@@ -72,6 +73,7 @@ background-color:rgba(255,255,255,.2)}
 .wiki-nav>ul>li{
 	float:left;
   top: 15px;
+  list-style-type: none;
 	height:15px;
 	line-height:15px;
 	text-transform:uppercase;
@@ -294,7 +296,8 @@ text-align:center}
     margin: 0 auto;
     width: 100%;  
     font-size: 16px;
-    overflow-x:hidden;
+    overflow:hidden;
+    background-color:#fff;
   }
 
   .wiki-nav{
