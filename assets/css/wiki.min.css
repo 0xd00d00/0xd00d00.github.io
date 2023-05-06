@@ -11,7 +11,7 @@ body{
 }
 
 body, th, td, div, p, li {
-    word-break: keep-all;
+  word-break: keep-all;
 }
 
 .wiki-container{
@@ -26,11 +26,6 @@ body, th, td, div, p, li {
   height: 45px;
   background-color:#30638e;
 }
-
-header .wiki-header > .wiki-nav {
-  overflow:hidden;
-}
-
 
 .g-header .g-logo{
 	float:left;
