@@ -3,7 +3,7 @@ body,html {
 }
 body{
 	font-family:NotoSans-Regular,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-	color:#373a3c !important;
+  	color:#656565;
 	-webkit-font-smoothing:antialiased;
   background-color:#f7f8fa;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
@@ -18,17 +18,14 @@ body, th, td, div, p, li {
   font-size:17px;
   border-left: 1px solid #ccc !important;
   border-right: 1px solid #ccc !important;
-  margin:auto;
+  margin:0 auto;
 }
 
 .wiki-header{
   width: auto;
   height: 45px;
-	transition:all .6s;
   background-color:#30638e;
   overflow:hidden;
-  margin 0;
-  z-index:1000
 }
 
 
