@@ -1,7 +1,7 @@
 body,html {
   height: 100%;
   overflow-x:hidden;
-  background-color:#f7f8fa;
+  background-color:#ffffff;
 }
 body{
 	font-family:NotoSans-Regular,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
@@ -15,6 +15,7 @@ body, th, td, div, p, li {
 }
 
 .wiki-container{
+  margin: 0 auto;
   width:860px;
   font-size:17px;
   border-left: 1px solid #ccc !important;
@@ -92,11 +93,6 @@ margin-right:0}
 
 .wiki-nav>ul>li>a:hover{
   opacity:1;
-}
-
-/* 나머지 스타일 */
-header.wiki-header ~ .wiki-container {
-  background-color: #ffffff;
 }
 
 .g-header .nav-default a:hover{
@@ -292,11 +288,9 @@ text-align:center}
 /* 우선 가운데 정렬과 넓이 사이즈만 조정  */
 @media screen and (max-width : 865px) {
   .wiki-container {
-    /* margin: 0 auto; */
+    margin: 0 auto;
     width: 100%;
     font-size: 16px;
-    overflow:hidden;
-    background-color:#fff;
   }
   .wiki-nav{
     /* width:100%;   */
