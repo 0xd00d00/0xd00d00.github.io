@@ -3,53 +3,55 @@
 {% include wiki-head.html %}
 
 <body>
-  <header id="wiki-post-header" class="wiki-header">
-    <nav class="wiki-nav">
-        <ul>
-            <li ><a href="/wiki/root-index/">  널두위키</a></li>
-            <li><a href="/tags.html">테그이동</a></li>
-            <li><a href="/archive.html">아카이브</a></li>
-        </ul>
-    </nav>
-  </header>
+  <div class=post-content>
+    <header id="wiki-post-header" class="wiki-header">
+      <nav class="wiki-nav">
+          <ul>
+              <li ><a href="/wiki/root-index/">  널두위키</a></li>
+              <li><a href="/tags.html">테그이동</a></li>
+              <li><a href="/archive.html">아카이브</a></li>
+          </ul>
+      </nav>
+    </header>
 
-  <div class="wiki-container">
-    <div class="wiki-post">
-      <header>
-        <div class="wiki-page-info">
-          <a><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> 
-          <a>
-          <i class="fas fa-hourglass-half"></i>
-            {% include read_time.html%}
-          </a>
-        </div>
-        <h1 class="wiki-page-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-        <div class="history-time">
-            <p><i class="far fa-calendar-alt"></i> 최초 생성 시각: {{ page.date | date: '%Y-%m-%d %H:%M:%S' }}</p>
-            <p><i class="far fa-calendar-alt"></i> 최근 수정 시각: {{ page.updated | date: '%Y-%m-%d %H:%M:%S' }}</p>
-        </div>
-        <div class="tag-box">
-          <span>분류</span>
-          <a href="#">test</a>
-        </div>
-      </header>
+    <div class="wiki-container">
+      <div class="wiki-post">
+        <header>
+          <div class="wiki-page-info">
+            <a><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> 
+            <a>
+            <i class="fas fa-hourglass-half"></i>
+              {% include read_time.html%}
+            </a>
+          </div>
+          <h1 class="wiki-page-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+          <div class="history-time">
+              <p><i class="far fa-calendar-alt"></i> 최초 생성 시각: {{ page.date | date: '%Y-%m-%d %H:%M:%S' }}</p>
+              <p><i class="far fa-calendar-alt"></i> 최근 수정 시각: {{ page.updated | date: '%Y-%m-%d %H:%M:%S' }}</p>
+          </div>
+          <div class="tag-box">
+            <span>분류</span>
+            <a href="#">test</a>
+          </div>
+        </header>
 
-      <div class="wiki-post-content">
-        {{page.content}}
+        <div class="wiki-post-content">
+          {{page.content}}
 
+        </div>
+      <div style="margin-top:60px; margin-bottom:20px">
+        <applause-button class="mb6"
+          color=rgb(48,99,142)
+          url={{ page.url }} >
+        </applause-button>
+        <p style="text-align:center; font-family:NotoSans-Bold; color:#30638e">공감하기</p>
       </div>
-    <div style="margin-top:60px; margin-bottom:20px">
-      <applause-button class="mb6"
-        color=rgb(48,99,142)
-        url={{ page.url }} >
-      </applause-button>
-      <p style="text-align:center; font-family:NotoSans-Bold; color:#30638e">공감하기</p>
-    </div>
 
-  {% include comment.html %}
-    </div> <!-- wiki-post -->
+    {% include comment.html %}
+      </div> <!-- wiki-post -->
 
-  </div> <!-- wiki-container -->
+    </div> <!-- wiki-container -->
+  </div> <!-- post -->
 </body>
 
 {% include createLink.html %}

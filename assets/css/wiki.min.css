@@ -1,6 +1,5 @@
 body,html {
   height: 100%;
-  overflow-x:hidden;
   background-color:#ffffff;
 }
 body{
@@ -12,6 +11,10 @@ body{
 
 body, th, td, div, p, li {
   word-break: keep-all;
+}
+.post-content {
+  overflow-x: auto;
+  padding: 5px;
 }
 
 .wiki-container{
