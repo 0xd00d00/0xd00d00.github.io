@@ -24,6 +24,9 @@ body, th, td, div, p, li {
 .wiki-header{
   height: 45px;
   background-color:#d00d00;
+}
+
+.wiki-header > .wiki-nav {
   overflow:hidden;
 }
 
@@ -89,6 +92,11 @@ margin-right:0}
 
 .wiki-nav>ul>li>a:hover{
   opacity:1;
+}
+
+/* 나머지 스타일 */
+header.wiki-header ~ .wiki-container {
+  background-color: #ffffff;
 }
 
 .g-header .nav-default a:hover{
@@ -290,7 +298,6 @@ text-align:center}
     overflow:hidden;
     background-color:#fff;
   }
-
   .wiki-nav{
     width:100%;  
   }
