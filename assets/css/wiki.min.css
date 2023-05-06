@@ -1,5 +1,6 @@
 body,html {
   height: 100%;
+  overflow-x:hidden;
 }
 body{
 	font-family:NotoSans-Regular,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
@@ -8,7 +9,6 @@ body{
   background-color:#f7f8fa;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
   touch-action: pan-y;
-  overflow-x:hidden;
 }
 
 body, th, td, div, p, li {
