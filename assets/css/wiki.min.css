@@ -1,14 +1,13 @@
 body,html {
   height: 100%;
   overflow-x:hidden;
+  background-color:#f7f8fa;
 }
 body{
 	font-family:NotoSans-Regular,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
   	color:#656565;
 	-webkit-font-smoothing:antialiased;
-  background-color:#f7f8fa;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
-  touch-action: pan-y;
 }
 
 body, th, td, div, p, li {
@@ -24,7 +23,7 @@ body, th, td, div, p, li {
 
 .wiki-header{
   height: 45px;
-  background-color:#d00d00;
+  background-color:#30638e;
 }
 
 header .wiki-header > .wiki-nav {
