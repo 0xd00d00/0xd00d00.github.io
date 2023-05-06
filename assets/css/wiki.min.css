@@ -63,10 +63,7 @@ border-radius:3px}
 background-color:rgba(255,255,255,.2)}
 
 .wiki-nav{
-  max-width:860px;
-  margin : auto;
   padding-top:15px;
-  display:block;
 }
 
 .wiki-nav>ul>li{
