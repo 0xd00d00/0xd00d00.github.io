@@ -27,11 +27,15 @@ body, th, td, div, p, li {
   word-break: keep-all;
 }
 
-/* 위키 wrapper 컨테이너. -> 못움직이게 만들어야함. 모바일에서 */
+/* 위키 wrapper 컨테이너. -> 못움직이게 만들어야함. 모바일에서 
+ *
+  #overflow-x: hidden;
+  #padding: 0.1px;
+ * */
 .wiki-container {
-  overflow-x: hidden;
-  padding: 0.1px;
-  background-color:#ffffff;
+  height : 45px;
+  width : 100%;
+  background-color:#30638e;
 }
 /* 위키 컨테이너 끝 */
 
@@ -85,8 +89,6 @@ margin-right:0}
   width:860px;
   font-size:17px;
   background-color: #FAFAFA;
-  border-left: 1px solid #ccc !important;
-  border-right: 1px solid #ccc !important;
 }
 
 @media screen and (max-width : 865px) {
@@ -99,6 +101,8 @@ margin-right:0}
 .wiki-body-outline {
     padding : 20px;
     display: block;
+  border-left: 1px solid #ccc !important;
+  border-right: 1px solid #ccc !important;
 }
 
 .wiki-body-content h2,
