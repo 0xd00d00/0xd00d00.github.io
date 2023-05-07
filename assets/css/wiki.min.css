@@ -41,14 +41,14 @@ body, th, td, div, p, li {
 .wiki-container {
   width : 100%;
   padding: 1px;
+  overflow-x: hidden;
 }
 /* 위키 컨테이너 끝 */
 
 /* 위키 헤드 영역 */
 .wiki-head{
-/*  background-color:#30638e;*/
-  padding: 5px;
-  background-color:#d00d00;
+  background-color:#30638e;
+  padding: 1px;
 }
 
 .wiki-head:after{
