@@ -49,6 +49,12 @@ body, th, td, div, p, li {
   background-color:#30638e;
 }
 
+.wiki-head:after{
+  clear: both;
+  content: ' ';
+  display: block;
+}
+
 .wiki-head-nav{
   float : left;
   padding-top: 10px;
