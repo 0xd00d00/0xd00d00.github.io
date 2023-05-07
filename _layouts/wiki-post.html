@@ -2,10 +2,26 @@
 <html>
 {% include wiki-head.html %}
 
+<!-- wiki page tree -->
+ <!-- wiki container
+    -  |
+    -  -- wiki-head
+    -  |          |
+    -  |          -- wiki-head-nav
+    -  -- wiki-body
+    -             |
+    -             -- wiki-body-outline
+    -                                |
+    -                                -- wiki-body-head
+    -                                |
+    -                                -- wiki-body-content -->
+
+
+
 <body>
-  <div class=post-content>
-    <header id="wiki-post-header" class="wiki-header">
-      <nav class="wiki-nav">
+  <div class=wiki-container>
+    <header id="wiki-post-header" class="wiki-head">
+      <nav class="wiki-head-nav">
           <ul>
               <li ><a href="/wiki/root-index/">  널두위키</a></li>
               <li><a href="/tags.html">테그이동</a></li>
@@ -14,9 +30,9 @@
       </nav>
     </header>
 
-    <div class="wiki-container">
-      <div class="wiki-post">
-        <header>
+    <div class="wiki-body">
+      <div class="wiki-body-outline">
+        <header> <!-- wiki-body-head -->
           <div class="wiki-page-info">
             <a><i class="far fa-user-circle"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a> 
             <a>
@@ -35,22 +51,23 @@
           </div>
         </header>
 
-        <div class="wiki-post-content">
+        <div class="wiki-body-content">
           {{page.content}}
+        </div> <!-- wiki-body-content -->
 
+        <!-- 공감하기 버튼  -->
+        <div style="margin-top:60px; margin-bottom:20px">
+          <applause-button class="mb6"
+            color=rgb(48,99,142)
+            url={{ page.url }} >
+          </applause-button>
+          <p style="text-align:center; font-family:NotoSans-Bold; color:#30638e">공감하기</p>
         </div>
-      <div style="margin-top:60px; margin-bottom:20px">
-        <applause-button class="mb6"
-          color=rgb(48,99,142)
-          url={{ page.url }} >
-        </applause-button>
-        <p style="text-align:center; font-family:NotoSans-Bold; color:#30638e">공감하기</p>
-      </div>
 
-    {% include comment.html %}
-      </div> <!-- wiki-post -->
-
-    </div> <!-- wiki-container -->
+        <!-- 커맨트 -->
+        {% include comment.html %}
+      </div> <!-- wiki-body-outline  -->
+    </div> <!-- wiki-body -->
   </div> <!-- post -->
 </body>
 
