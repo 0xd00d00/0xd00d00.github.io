@@ -16,7 +16,7 @@
     /**
      * 본문의 헤딩 엘리먼트 배열 캐시.
      */
-    const headings = document.querySelector(".wiki-post-content")
+    const headings = document.querySelector(".wiki-body-content")
         .querySelectorAll("h1, h2, h3, h4, h5, h6, h7, h8, h9");
 
     /**

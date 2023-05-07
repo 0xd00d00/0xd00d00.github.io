@@ -3,7 +3,7 @@
 
   // post가 없으면 wiki-index를 찾도록 해
   if (post === null)
-    post = document.querySelector('div.wiki-post-content');
+    post = document.querySelector('div.wiki-body-content');
 
   // p, ul, h1~h6, table 중 link로 변환해야되는걸 변환하는 동작.
   // article 부터 순회하는거임.

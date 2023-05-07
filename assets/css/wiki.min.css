@@ -22,6 +22,7 @@ body{
 	-webkit-font-smoothing:antialiased;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
   -webkit-text-size-adjust: 100%;
+  margin:0;
   display: flex;
       min-height: 100vh;
     flex-direction: column;
@@ -376,8 +377,8 @@ text-align:center}
     border: 0.7px solid #9b9898;
     padding: 10px;
     padding-left: 30px;
-    background-color: #FFFFFF;
     font-size:0.8em;
+    background-color: #FAFAFA;
     line-height: 1.5;
 }
 
