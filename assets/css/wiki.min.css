@@ -46,7 +46,7 @@ body, th, td, div, p, li {
 /* 위키 헤드 영역 */
 .wiki-head{
 /*  background-color:#30638e;*/
-  padding: 1px;
+  padding: 5px;
   background-color:#d00d00;
 }
 
