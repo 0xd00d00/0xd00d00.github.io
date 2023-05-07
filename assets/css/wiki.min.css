@@ -30,6 +30,7 @@ body, th, td, div, p, li {
 /* 위키 wrapper 컨테이너. -> 못움직이게 만들어야함. 모바일에서 */
 .wiki-container {
   overflow-x: hidden;
+  padding: 0;
   background-color:#ffffff;
 }
 /* 위키 컨테이너 끝 */
