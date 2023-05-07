@@ -35,7 +35,6 @@ body, th, td, div, p, li {
 .wiki-container {
   height : 45px;
   width : 100%;
-  background-color:#d00d00;
 }
 /* 위키 컨테이너 끝 */
 
@@ -46,12 +45,8 @@ body, th, td, div, p, li {
 }
 
 .wiki-head-nav{
-  padding-top:15px;
-}
-
-.wiki-head-nav ul {
-  margin: 0 auto;
-  width: 900px;
+  float : left;
+  padding-top: 10px;
 }
 
 .wiki-head-nav>ul>li{
@@ -61,7 +56,7 @@ body, th, td, div, p, li {
 	height:15px;
 	line-height:15px;
 	text-transform:uppercase;
-  margin-right:23px
+  margin-right:10px
 }
 
 .wiki-head-nav>ul>li:last-child{
