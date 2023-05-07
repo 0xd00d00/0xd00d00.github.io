@@ -21,6 +21,10 @@ body{
   	color:#656565;
 	-webkit-font-smoothing:antialiased;
   counter-reset: h2counter, h3counter, h4counter,h5counter;
+  -webkit-text-size-adjust: 100%;
+  display: flex;
+      min-height: 100vh;
+    flex-direction: column;
 }
 
 body, th, td, div, p, li {
