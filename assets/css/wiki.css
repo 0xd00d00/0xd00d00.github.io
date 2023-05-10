@@ -69,7 +69,7 @@ aside {
   font-weight: 600;
   font-style: italic;
   color: #3e3e3e;
-    font-family: Window-Maple-Bold;
+    font-family: NotoSans-Bold;
     padding-top: 5px;
 }
 
@@ -110,7 +110,7 @@ aside {
   color : #666;
 }
 #wiki-list-a {
-  font-family: 'Window-Maple-Bold' !important;
+  font-family: 'NotoSans-Bold' !important;
   font-size : 1.4em;
 }
 
