@@ -43,7 +43,7 @@ layout: default
   {% endfor %}
 </ul>
   {% if documents.size > page_offset %}
-    <div id="wiki-list-a-wrapper"><a id="wiki-list-a" href href="#" onclick="showDocuments()"> ► 전체문서 보기 {{ documents.size }} 개</a></div>
+  <div id="wiki-list-a-wrapper"><a id="wiki-list-a" href href="#" onclick="showDocuments()"> ► 남은 문서 전체보기 ({{ documents.size | minus: page_offset }} 개)</a></div>
   {% endif %}
 </div>
 </main>
@@ -70,7 +70,7 @@ layout: default
      event.preventDefault();
      const listContainer = $('#wiki-list-container');
      if ($("#new_list").length) {
-       $(this).text("► 전체문서 보기 {{ documents.size }} 개");
+       $(this).text("► 남은 문서 전체보기 ({{ documents.size | minus: page_offset }} 개)");
        listContainer.find('li').slice( {{ page_offset }} ).remove();
      } else {
        $(this).text("▲ 전체문서 숨기기");
