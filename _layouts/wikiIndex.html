@@ -19,8 +19,10 @@ layout: default
 
 
 <main class=wiki-content>
+{% assign page_offset = 20 %}
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
-<ul class="wiki-content-list">
+<div class="wiki-content-list">
+  
   <div class="wiki-hr-container">
     <hr class="wiki-hr">
     <span class="wiki-tree-span">개인 성장을 위한 <span class="blue">지식의 나무</span></span><br>
@@ -32,98 +34,20 @@ layout: default
     <label class="wiki-label" for="search-input"># 랜덤위키</label>
   </div>
 
-
-  <h2>최근 변경된 문서(수정중)</h2>
-  {% for wiki in documents limit:5 %} 
-    <li style="display:list-item">
-      <a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a>
-    </li>
-  {% endfor %}
-  <a id="wiki-list-a" href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
-
-</ul>
-</main>
-<!--
-<div class="g-banner tags-banner " style="background :linear-gradient(#498cbf,#06387a);" data-theme="{{ site.theme-color }}">
-    <h2>Archive</h2>
-</div>
-
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% endif %}
-
-<h2>최근 변경된 문서(수정중)</h2>
-{% assign documents = site.wiki | sort: 'updated' | reverse %}
-<ul class="wiki-index">
-  {% for wiki in documents limit: 5 %} 
-    <li style="display:list-item">
-      <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
-    <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
-    </li>
-  {% endfor %}
-  <a href href="#" onclick="showDocuments()"> 전체문서 보기 {{ documents.size }} 개</a>
-
-</ul>
--->
-<!--
-<ul class="wiki-index">
-  {% for wiki in documents limit: 5 %} 
-    <li style="display:list-item">
-      <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
-      <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
-    </li>
-  {% endfor %}
-  
-  <li id="hidden-items" style="display:none;">
-    {% for wiki in documents offset: 5 %} 
-      <li style="display:list-item">
-        <a href=" {{ wiki.url | prepend: site.baseurl }}">{{ wiki.title }}</a>
-        <time>{{ wiki.updated | date: "%Y-%m-%d" }}</time>
-      </li>
-    {% endfor %}
-  </li>
-  <button onclick="showDocuments()">전체문서 보기 {{ documents.size }} 개</button>
-</ul>
--->
-<!--
-<ul class="archive">
-  {% for post in site.posts %}
-      {% assign year = post.date | date: '%Y-%m' %}
-      {% assign nyear = post.next.date | date: '%Y-%m' %}
-      {% assign year1 = post.date | date: '%Y' %}
-      {% assign nyear1 = post.next.date | date: '%Y' %}
-      {% if year1 != nyear1 %}
-        <h1>{{ post.date | date: '%Y' }}</h1>
-        <hr style="height: 2px; background-color: #464545; border:#464545;">
-      {% endif %}
-      {% if year != nyear %}
-          {% assign counter = 0 %}
-          {% assign speed = 0 %}
-          {% for post in site.posts %}
-             {% assign currentYear = post.date | date: '%Y-%m' %}
-             {% if year == currentYear %}
-                {% assign counter = counter | plus: 1 %}
-                {% assign speed = 1 %}
-             {% elsif speed == 1 %}
-                {% break %}
-             {% endif %}
-          {% endfor %}
-          <h2>{{ post.date | date: '%Y-%m' }}<span class="span_counter">{{ counter }}</span></h2>
-      {% endif %}
-
+<ul id="wiki-list-container">
+  <h2><i class="fa fa-folder-open"></i> 최근 변경된 문서(수정중 / 데스크탑 기준으로 만드는 중)</h2>
+  {% for wiki in documents limit: page_offset %}
     <li>
-      {% if post.link %}
-      <a href="{{ post.link }}">
-      {% else %}
-      <a href="{{ site.baseurl }}{{ post.url }}">
-      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-      {% endif %}
-        {{ post.title }}
-      </a>
+      <a href=" {{ wiki.url | prepend: site.baseurl }}"><i class="fa fa-file-signature"></i> {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a>
     </li>
   {% endfor %}
 </ul>
--->
+  {% if documents.size > page_offset %}
+    <div id="wiki-list-a-wrapper"><a id="wiki-list-a" href href="#" onclick="showDocuments()"> ► 전체문서 보기 {{ documents.size }} 개</a></div>
+  {% endif %}
+</div>
+</main>
+
 {% include footer.html %}
 <script>
    function displayCheck()
@@ -144,15 +68,14 @@ layout: default
 //   wiki page를 꾸며보자
    $("#wiki-list-a").click(function(event) {
      event.preventDefault();
-     const arg1 = $(this).data('arg1');
-     const listContainer = $(this).parent();
+     const listContainer = $('#wiki-list-container');
      if ($("#new_list").length) {
-       alert('(test) 우선 리스트 목록 접습니다~');
-       listContainer.find('li').slice(5).remove();
+       $(this).text("► 전체문서 보기 {{ documents.size }} 개");
+       listContainer.find('li').slice( {{ page_offset }} ).remove();
      } else {
-       alert('(test) 나머지 리스트 목록 보여드릴게요~');
-       {% for wiki in documents offset:5 %}
-          $(this).before('<li id="new_list"><a href=" {{ wiki.url | prepend: site.baseurl }}">⎘ {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a></li>');
+       $(this).text("▲ 전체문서 숨기기");
+       {% for wiki in documents offset: page_offset %}
+          listContainer.append('<li id="new_list"><a href=" {{ wiki.url | prepend: site.baseurl }}"><i class="fa fa-file-signature"></i> {{ wiki.updated | date: "%Y-%m-%d" }} - {{ wiki.title }}</a></li>');
        {% endfor %} 
      }
    })
@@ -162,6 +85,8 @@ function showDocuments() {
   var hiddenItems = document.getElementById("hidden-items");
   if (hiddenItems.style.display === "none") {
     hiddenItems.style.display = "block";
+    alert('숨기기..?');
+
     this.textContent = "전체문서 숨기기";
   } else {
     hiddenItems.style.display = "none";

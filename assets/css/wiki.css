@@ -65,7 +65,7 @@ aside {
   margin-top: 28px;
 	margin-bottom: 1rem;
   line-height: 1.15;
-  font-size: 26px;
+  font-size: 1.4em;
   font-weight: 600;
   font-style: italic;
   color: #3e3e3e;
@@ -78,24 +78,40 @@ aside {
 }
 
 .wiki-content-list li{
-    font-size : 19px;
-    padding: 8px 5px;
+    font-size : 1.1em;
+    padding: 6px;
+  white-space: nowrap; /* 텍스트가 한 줄로 표시되도록 설정 */
+  overflow: hidden; /* 텍스트가 요소의 영역을 넘어갈 때 숨김 처리 */
+  text-overflow: ellipsis;
 }
 
 .wiki-content-list li a {
    box-shadow: none;
    color: #3165ce;
-   font-family: 'NotoSans-Bold';
+   font-family: 'NotoSans-Regular';
    /* text-decoration: underline !important; */
 }
 
 .wiki-content-list li a:hover{
-   padding: 8px;
+   padding: 3px;
    color: #d00d00;
    text-shadow: -.25px -.25px 0 #d00d00,
                  .25px .25px #d00d00;
-   border-radius: 6px;
+   border-radius: 4px;
    background-color: #eaeaea;
+}
+
+#wiki-list-container {
+  font-size:18px;
+}
+
+#wiki-list-a-wrapper {
+  margin-top: 10px;
+  color : #666;
+}
+#wiki-list-a {
+  font-family: 'Window-Maple-Bold' !important;
+  font-size : 1.4em;
 }
 
 @media screen and (max-width:895px){
@@ -136,12 +152,15 @@ aside {
 }
 
 /* 폰트 깨져서 추가함 */
-@media screen and (max-width:376px){
+@media screen and (max-width:476px){
   .wiki-banner h2{
     font-size : 33px;
   }
   .wiki-banner h3{
     font-size : 18px;
+  }
+  #wiki-list-container {
+    font-size : 16px;
   }
 }
 
