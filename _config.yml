@@ -1,6 +1,6 @@
 # Site settings
-title: "doodoo's coding"
-description: "I really love solving computer problem. I wanna grow today more than yesterday."
+title: "널두"
+description: "항상 겸손함은 처음처럼 (Null do) 실력은 너드처럼 (Nerd do) 🔥"
 keyword: 'Chromium, Algorithm, Baekjoon, C++, Google'
 url: 'https://0xd00d00.github.io' # your host
 
@@ -21,9 +21,9 @@ footer:
   since: 2021
 
 # Author info
-author: 'DooDoo'
-nickname: 'doodoo'
-bio: 'I really love solving computer problem. I wanna grow today more than yesterday :)'
+author: '널두'
+nickname: '널두'
+bio: "항상 겸손함은 처음처럼 (Null do) 실력은 너드처럼 (Nerd do) 🔥"
 avatar: '/assets/img/profile.png'
 
 # Search

@@ -149,11 +149,13 @@ text-shadow:0 1px 1px rgba(0,0,0,.2)}
 	padding-top:125px;
 	line-height:38px;
 	font-size:42px;
-	font-family:NotoSans-Bold,Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+	font-family: Window-Maple-Bold,NotoSans-Bold,Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
 	font-weight:700;
 	letter-spacing:2px;
 line-height:52px}
 .home-banner h3{
+	font-family: Window-Maple-Bold,NotoSans-Bold,Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+	font-weight:700;
 	font-size:20px;
 	font-weight:400;
 	letter-spacing:10px;

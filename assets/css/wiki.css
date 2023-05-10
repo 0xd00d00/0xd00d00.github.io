@@ -215,15 +215,15 @@ aside {
 }
 
 /* input box 꾸미기 */
-input[type="text"] {
-  width: 85%; /* 너비 조절 */
-  height: 20px; /* 높이 조절 */
-  font-size: 16px;
-  border: 1px solid gray;
-  box-sizing: border-box;
-  color: #666; /* input 안의 텍스트 색상 */
-}
-
-input[type="text"]::placeholder {
-  color: #999; /* watermark 색상 */
-}
+/* input[type="text"] { */
+/*   width: 85%; [> 너비 조절 <] */
+/*   height: 20px; [> 높이 조절 <] */
+/*   font-size: 16px; */
+/*   border: 1px solid gray; */
+/*   box-sizing: border-box; */
+/*   color: #666; [> input 안의 텍스트 색상 <] */
+/* } */
+/*  */
+/* input[type="text"]::placeholder { */
+/*   color: #999; [> watermark 색상 <] */
+/* } */
