@@ -161,10 +161,10 @@ line-height:52px}
 	letter-spacing:10px;
 margin-top:8px}
 .banner-theme-default{
-	background:-webkit-linear-gradient(0deg,#0f51a9,#64889f);
-	background:-o-linear-gradient(0deg,#0f51a9,#64889f);
-	background:-moz-linear-gradient(0deg,#0f51a9,#64889f);
-	background:linear-gradient(#0f51a9,#64889f);
+	background:-webkit-linear-gradient(0deg,#3D5A81,#837D73);
+	background:-o-linear-gradient(0deg,#3D5A81,#837D73);
+	background:-moz-linear-gradient(0deg,#3D5A81,#837D73);
+	background:linear-gradient(#3D5A81,#837D73);
 }
 .banner-theme-pink{
 	background:-webkit-linear-gradient(0deg,#0f51a9,#64889f);

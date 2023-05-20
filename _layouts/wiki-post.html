@@ -5,10 +5,11 @@
 <!-- wiki page tree -->
  <!-- wiki container
     -  |
-    -  -- wiki-head
-    -  |          |
-    -  |          -- wiki-head-nav
     -  -- wiki-body
+    -             |
+    -             -- wiki-head
+    -             |           |
+    -             |           -- wiki-nav-head
     -             |
     -             -- wiki-body-outline
     -                                |
@@ -20,16 +21,14 @@
   <div class=wiki-container>
 
     <!-- wiki wikitree관련해서 같이 꾸며야하니 -->
-    <header id="wiki-post-header" class="wiki-head">
-      <nav class="wiki-head-nav">
-          <ul>
-              <li ><a href="/wiki/root-index/">  널두위키</a></li>
-              <li><a href="/tags.html">테그이동</a></li>
-              <li><a href="/archive.html">아카이브</a></li>
-          </ul>
-      </nav>
-    </header>
     <div class="wiki-body">
+      <header class=wiki-head style="width:100%">
+        <div class="wiki-nav-head" >
+          <a href="/wiki/root-index/">> 널두위키</a>
+          <a href="/tags.html"> 테그이동</a>
+          <a href="/archive.html"> 아카이브</a>
+        </div>
+      </header>
 
       <div class="wiki-body-outline">
         <header> <!-- wiki-body-head -->

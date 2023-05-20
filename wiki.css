@@ -31,17 +31,23 @@
    color: #344B83;
 }
 
+#wiki-list-a {
+  font-family: 'Window-Maple-Bold' !important;
+  font-size : 20px;
+  margin-top: 15px;
+}
+
 .wiki-content-list li a:hover{
-   padding: 8px;
+   padding: 5px;
    color: #d00d00;
    text-shadow: -.25px -.25px 0 #d00d00,
                  .25px .25px #d00d00;
-   border-radius: 6px;
+   border-radius: 3px;
    background-color: #eaeaea;
 }
 
 @media screen and (max-width:795px){
-  /* wiki content 695보다 작으면.. */
+  /* wiki content 795보다 작으면.. */
   .wiki-content {
     width: 100%
   }
