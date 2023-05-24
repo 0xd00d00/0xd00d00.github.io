@@ -30,9 +30,11 @@ int main() {
   cout << endl;
 
   // 2. 나이정보 이용해 투표권 없는 사람 제거하는 코드 작성 remove_if 활용
-  remove_if(begin(citizens), end(citizens), [](const citizen &c) {
-        return (c.age < 19);
+  citizens.remove_if([](const citizen &c) {
+        return (c.age <= 19);
   });
+
+  // 3. n  , , 
 
   // 투표권 없는 사람 출력
   for (auto a : citizens)
