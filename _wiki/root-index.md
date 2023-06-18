@@ -81,10 +81,15 @@ test 수행 합니다. 테스트용 작성 페이지 입니다. 다다다다다�
 [[test19]]
 
 ### 프로그래밍
-* /23_programming
+* 23_programming
   * 23_cpp_book
     * coding_test_datastructure
       * [[/23_cpp_book/coding_test/datastructure/chapter1]]
+  * 23_coding_test
+    * 23_boj
+      * [[/23_coding_test/23_boj/med_prac]]
+  * Qt
+    * [[/Qt/QT_1]]
 
 ### 재테크
 * [[/insurance]]{보험}
