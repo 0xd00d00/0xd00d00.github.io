@@ -1,10 +1,10 @@
 ---
 layout  : wiki-post
 author  : 널두
-title   : "Qt 공부"
+title   : "Qt 공부(1)"
 subtitle : 
 date    : 2023-06-18 15:05:29 +0900
-updated : 2023-06-18 15:46:47 +0900
+updated : 2023-06-18 15:52:11 +0900
 ---
 * ToC
 {:toc}

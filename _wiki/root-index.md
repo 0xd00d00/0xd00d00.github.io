@@ -90,6 +90,7 @@ test 수행 합니다. 테스트용 작성 페이지 입니다. 다다다다다�
       * [[/23_coding_test/23_boj/med_prac]]
   * Qt
     * [[/Qt/QT_1]]
+    * [[/Qt/QT_2]]
 
 ### 재테크
 * [[/insurance]]{보험}
