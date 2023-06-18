@@ -4,7 +4,7 @@ author  : 널두
 title   : "Qt 공부(2)"
 subtitle : 
 date    : 2023-06-18 15:52:20 +0900
-updated : 2023-06-18 16:52:27 +0900
+updated : 2023-06-18 16:56:46 +0900
 ---
 * ToC
 {:toc}
@@ -55,7 +55,7 @@ int main(int argc, char** argv)
       * 기본적 버튼 (닫기 최소화 접기)과 사이즈 조절가능한 윈도우 생성
     * ![qt image](/assets/img/QT/qwidget_result.png){: height="300px" width="300px"}
 
-### Window #2
+## Window #2
 * 프로그램에서 윈도우를 만든 경우
   * 윈도우에서 발생되는 다양한 이벤트 (마우스, 키보드 등)을 처리해야함.
   * 윈오두 위에 다양한 자식 윈도우 (button, slider 등의 컨트롤)을 만들고, 컨트롤에서 나오는 이벤트로 처리하는 코드 작성해야함.
