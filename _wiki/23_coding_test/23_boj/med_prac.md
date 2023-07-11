@@ -4,7 +4,7 @@ author  : 널두
 title   : "23년 BOJ 중급"
 subtitle : 
 date    : 2023-06-11 10:24:15 +0900
-updated : 2023-07-10 22:07:26 +0900
+updated : 2023-07-11 21:43:07 +0900
 ---
 * ToC
 {:toc}
@@ -35,6 +35,29 @@ updated : 2023-07-10 22:07:26 +0900
 3. 배열에 택한 숫자 체크함.
 4. [1] 돌아가 테스트.
 
+### 7월 11일
+* 1문제 완료 (7월 12일 복습)
+  * N-Queen / 9663
+  * 유명한 문제임.
+    * 2^n*n -> n^n -> n! 로 변경과정 복기
+    * 배열활용 후 속도 개선
+  * ✅ 블로그 정리할 때 들어가면 좋은 부분
+
+```cpp
+bool check(int row, int col) {
+  if (A[col])
+    return false;
+
+  if (B[row + col])
+    return false;
+
+  if (C[row-col+N])
+    return false;
+
+  return true;
+}
+```
+
 ### 7월 10일
 * 3문제 완료 (7월 12일 복습)
   * 테트로미노 / 14500
@@ -47,7 +70,10 @@ updated : 2023-07-10 22:07:26 +0900
   * 에너지 모으기 / 16198
     * enery summary 하는 부분에서 answer 나누는 부분 이해안됨.
     * 해당 부분 체크해볼 것.
-```
+    * 분할 정복 느낌
+    * ✅ 블로그 정리할 때 넣으면 좋을 부분!
+
+```cpp
 int solve(vector<int>& a) {
   int size = a.size();
   if (size == 2) return 0;
@@ -56,7 +82,7 @@ int solve(vector<int>& a) {
   int energy;
   for (int i = 1; i < size - 1; i++) {
     vector<int> b(a);
-    energy = b[i-1] * b[i+1];
+    energy = b[i-1] * b[i+1]
     b.erase(b.begin() + i);
 
     // 확인할 포인트
@@ -68,5 +94,4 @@ int solve(vector<int>& a) {
 
   return ans;
 }
-  
 ```
