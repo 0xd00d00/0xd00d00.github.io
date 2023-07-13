@@ -4,7 +4,7 @@ author  : 널두
 title   : "23년 BOJ 중급"
 subtitle : 
 date    : 2023-06-11 10:24:15 +0900
-updated : 2023-07-12 22:13:52 +0900
+updated : 2023-07-13 22:08:39 +0900
 ---
 * ToC
 {:toc}
@@ -37,6 +37,64 @@ updated : 2023-07-12 22:13:52 +0900
 
 ## 알고리즘 연습
 알고리즘 실력향상을 위해 연습한 내용 로그입니다.
+
+### 7월 13일
+* 1문제 완료
+  * 알파벳 / [1987](https://www.acmicpc.net/problem/1987)
+  * 알게된 테크닉
+    * [char - 'A'] 를 사용할 경우, 메모리 공간 절약가능
+    * 2가지 풀이법.
+    * cnt를 가져가거나, 재귀방식으로 풀거나
+      * 재귀가 더 깔끔함.
+    * 0,0 을 넣는 부분
+      * 처음에, 이걸 어떻게 계산하지 했는데?
+      * 왠걸.. 4 방향으로 움직이면, 0,1 시점에서 왼쪽으로 가면 0,0..
+
+* cnt를 가져가는 코드
+
+```cpp
+void solve(int x, int y, int cnt) {
+  if (cnt > ans) ans = cnt;
+
+  for (int i = 0; i < 4; i++) {
+    int new_x = x + dx[i];
+    int new_y = y + dy[i];
+    // 범위 안에 있고.
+    if (new_x >= 0 && new_y >= 0 && new_x < R && new_y < C) {
+      // false 일 경우, 한번도 방문 x
+      if (!checked[P[new_x][new_y] - 'A']) {
+        checked[P[new_x][new_y] - 'A'] = true;
+        solve(new_x, new_y, cnt+1);
+        checked[P[new_x][new_y] - 'A'] = false;
+      }
+    }
+  }
+}
+```
+
+* 재귀 형식으로 푸는 방법
+
+```cpp
+int solve(int x, int y) {
+  int ans = 0;
+  for (int i = 0; i < 4; i++) {
+    int new_x = x + dx[i];
+    int new_y = y + dy[i];
+    // 범위 안에 있고.
+    if (new_x >= 0 && new_y >= 0 && new_x < R && new_y < C) {
+      // false 일 경우, 한번도 방문 x
+      if (!checked[P[new_x][new_y] - 'A']) {
+        checked[P[new_x][new_y] - 'A'] = true;
+        int next = solve(new_x, new_y);
+        if (ans < next) ans = next; 
+        checked[P[new_x][new_y] - 'A'] = false;
+      }
+    }
+  }
+
+  return ans + 1;
+}
+```
 
 ### 7월 12일
 * 1문제 완료
