@@ -4,7 +4,7 @@ author  : 널두
 title   : "23년 BOJ 중급"
 subtitle : 
 date    : 2023-06-11 10:24:15 +0900
-updated : 2023-07-15 18:39:20 +0900
+updated : 2023-07-16 22:30:07 +0900
 ---
 * ToC
 {:toc}
@@ -37,6 +37,35 @@ updated : 2023-07-15 18:39:20 +0900
 
 ## 알고리즘 연습
 알고리즘 실력향상을 위해 연습한 내용 로그입니다.
+
+### 7월 16일
+* 1문제 성공 (다시 풀어봐야함.)
+  * 가르침
+  * 코드 복기 필요함,,
+
+```cpp
+int go(int index, int k, vector<string> &words) {
+    if (k < 0) return 0;
+    if (index == 26) {
+        return count(words);
+    }
+    int ans = 0;
+    learn[index] = true;
+    int t1 = go(index+1, k-1, words);
+    learn[index] = false;
+    if (ans < t1) ans = t1;
+    if (index != 'a'-'a' && index != 'n'-'a' && index != 't'-'a' && index != 'i'-'a' && index != 'c'-'a') {
+        t1 = go(index+1, k, words);
+        if (ans < t1) ans = t1;
+    }
+    return ans;
+}
+```
+
+* 패인분석 (더 나은 풀이를 위해.)
+  * 다음주 20개 이상 풀기
+  * 업무외 알고리즘 풀 때 turn off
+  * 업무 일정 다이어리 작성 필요.
 
 ### 7월 15일
 * 3문제 도전
